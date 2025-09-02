@@ -1,2 +1,3 @@
-# Francisco-s-Website
-Project for WEB BASED IT, this website features a complete website programmed in semantic HTML and CSS for project 1. 
+# CIS 4004 — Project #1 Resume Starter
+
+Replace placeholders and deploy to GitHub Pages.
