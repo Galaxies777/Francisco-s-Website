@@ -8,6 +8,13 @@ body {
   padding: 0 1rem;
 }
 
+.profile-pic {
+  width: 120px;      /* ancho fijo */
+  height: auto;      /* alto automático para no deformar */
+  border-radius: 50%; /* círculo elegante */
+}
+
+
 /* Header */
 .site-header {
   border-bottom: 3px solid #0a66c2;   /* azul LinkedIn */
@@ -118,4 +125,5 @@ li {
     gap: 1rem;
   }
 }
+
 
