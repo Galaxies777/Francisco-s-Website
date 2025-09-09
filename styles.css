@@ -7,13 +7,15 @@ body {
   color: #1a1a1a;             /* texto principal oscuro */
   padding: 0 1rem;
 }
-
+/* ===== Imagen de perfil ===== */
 .profile-pic {
-  width: 120px;      /* ancho fijo */
-  height: auto;      /* alto automático para no deformar */
-  border-radius: 50%; /* círculo elegante */
+  width: 120px;          /* controla ancho */
+  height: 120px;         /* igual que el ancho para mantener círculo */
+  object-fit: cover;     /* recorta sin deformar */
+  border-radius: 50%;    /* círculo */
+  border: 2px solid #e0e6ed;
+  margin-right: 1rem;    /* espacio entre foto y el texto */
 }
-
 
 /* Header */
 .site-header {
@@ -125,5 +127,6 @@ li {
     gap: 1rem;
   }
 }
+
 
 
