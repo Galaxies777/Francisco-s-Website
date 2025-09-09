@@ -7,16 +7,6 @@ body {
   color: #1a1a1a;             /* texto principal oscuro */
   padding: 0 1rem;
 }
-/* ===== Imagen de perfil ===== */
-.profile-pic {
-  width: 120px;          /* controla ancho */
-  height: 120px;         /* igual que el ancho para mantener círculo */
-  object-fit: cover;     /* recorta sin deformar */
-  border-radius: 50%;    /* círculo */
-  border: 2px solid #e0e6ed;
-  margin-right: 1rem;    /* espacio entre foto y el texto */
-}
-
 /* Header */
 .site-header {
   border-bottom: 3px solid #0a66c2;   /* azul LinkedIn */
@@ -127,6 +117,7 @@ li {
     gap: 1rem;
   }
 }
+
 
 
 
