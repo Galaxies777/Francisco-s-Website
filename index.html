@@ -1,4 +1,4 @@
-<!doctype html>
+     <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,52 +6,109 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Saltar al contenido principal -->
   <a class="skip-link" href="#main">Skip to content</a>
-    <nav aria-label="Primary" class="primary-nav">
-      <ul role="list">
-        <li><a href="#about" aria-current="page">About Me</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="project-1.html">Project 1</a></li>
-        <li><a href="project-2.html">Project 2</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-  <header>
-    <h1>Francisco Santiago</h1>
-    <ul class="contact" role="list">
-      <li><a href="mailto:tu-ucf@ucf.edu">tu-ucf@ucf.edu</a></li>
-      <li><a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">LinkedIn</a></li>
-    </ul>
-    
-    <nav>
-      <ul>
-        <li><a href="index.html">Resume</a></li>
-        <li><a href="project-1.html">Project 1</a></li>
-        <li><a href="project-2.html">Project 2</a></li>
-      </ul>
-    </nav>
+
+  <!-- Header con nombre y menú -->
+  <header class="site-header" role="banner">
+    <div class="header-content">
+      <h1 class="site-title">Francisco Santiago</h1>
+      <nav aria-label="Primary" class="primary-nav">
+        <ul>
+          <li><a href="#about" aria-current="page">About Me</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="project-1.html">Project 1</a></li>
+          <li><a href="project-2.html">Project 2</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="education">
-      <h2>Educación</h2>
-      <article>
-        <h3>University of Central Florida — B.S. IT</h3>
-        <p><time datetime="2022-08">Ago 2022</time> – <time datetime="2026-05">May 2026</time></p>
-      </article>
+  <!-- Contenido principal -->
+  <main id="main">
+    <!-- About Me -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Soy estudiante de IT en UCF, apasionado por el desarrollo web, la programación y la comunicación técnica. Busco oportunidades para aplicar mis habilidades en proyectos reales y crecer como profesional en el área de IT.</p>
+      <ul class="contact">
+        <li><a href="mailto:tu-ucf@ucf.edu">tu-ucf@ucf.edu</a></li>
+        <li><a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
     </section>
 
-    <section class="experience">
-      <h2>Experiencia</h2>
-      <article>
-        <h3>Cricket Wireless — Key Holder</h3>
-        <p><time datetime="2024-01">Ene 2024</time> – <time datetime="2025-09">Sep 2025</time></p>
-      </article>
+    <!-- Resume -->
+    <section id="resume">
+      <h2>Resume</h2>
+
+      <!-- Objective -->
+      <section class="objective">
+        <h3>Objective</h3>
+        <p>Senior IT student at the University of Central Florida seeking an internship or entry-level IT role to apply skills in web design, programming, and technical communication.</p>
+      </section>
+
+      <!-- Education -->
+      <section class="education">
+        <h3>Education</h3>
+        <article>
+          <h4>University of Central Florida — B.S. IT</h4>
+          <p><time datetime="2022-08">Aug 2022</time> – <time datetime="2026-05">May 2026</time> (Expected)</p>
+          <ul>
+            <li>Web Systems</li>
+            <li>Data Structures</li>
+            <li>Networking Fundamentals</li>
+            <li>Technical Communication</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Experience -->
+      <section class="experience">
+        <h3>Experience</h3>
+        <article>
+          <h4>Cricket Wireless — Key Holder</h4>
+          <p><time datetime="2024-01">Jan 2024</time> – <time datetime="2025-09">Sep 2025</time>, Orlando, FL</p>
+          <ul>
+            <li>Assisted customers with device troubleshooting and technical issues.</li>
+            <li>Trained new hires on POS systems and customer service best practices.</li>
+            <li>Maintained daily operations and sales goals.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects">
+        <h3>Projects</h3>
+        <ul>
+          <li><a href="project-1.html">Project 1: MARIE Assembly Multiplier</a></li>
+          <li><a href="project-2.html">Project 2: UCF Style Guide — Document Design Chapter</a></li>
+        </ul>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>Semantic HTML & CSS</li>
+          <li>Accessibility (WAVE, W3C)</li>
+          <li>Git & GitHub</li>
+          <li>Networking Fundamentals</li>
+          <li>CompTIA A+ (in progress)</li>
+        </ul>
+      </section>
+
+      <!-- Awards -->
+      <section class="awards">
+        <h3>Awards & Honors</h3>
+        <ul>
+          <li>Dean’s List, UCF</li>
+          <li>CREAR Peer Mentor Program</li>
+        </ul>
+      </section>
     </section>
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
     <p><small>&copy; 2025 Francisco Santiago</small></p>
   </footer>
 </body>
