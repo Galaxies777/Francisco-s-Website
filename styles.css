@@ -7,6 +7,16 @@ body {
   color: #1a1a1a;             /* texto principal oscuro */
   padding: 0 1rem;
 }
+
+/* ===== Imagen de perfil ===== */
+.profile-pic img {
+  width: 120px;          /* controla ancho */
+  height: 120px;         /* igual que el ancho para mantener círculo */
+  object-fit: cover;     /* recorta sin deformar */
+  border-radius: 50%;    /* círculo */
+  border: 2px solid #e0e6ed;
+}
+
 /* Header */
 .site-header {
   border-bottom: 3px solid #0a66c2;   /* azul LinkedIn */
@@ -109,6 +119,25 @@ li {
   background: #ffffff;
 }
 
+/* === ABOUT SECTION === */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;  /* aligns text and photo at the top */
+  gap: 2rem;
+}
+
+.about-photo { margin: 0; }       /* remove default figure margin */
+.about-text h2 { margin-top: 0; } /* ensure About Me heading aligns with photo */
+
+/* Style the image in About */
+.about-photo img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #e0e6ed;
+}
+
 /* Responsive ajustes */
 @media (max-width: 600px) {
   .header-content {
@@ -116,8 +145,9 @@ li {
     align-items: flex-start;
     gap: 1rem;
   }
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
-
-
-
-
