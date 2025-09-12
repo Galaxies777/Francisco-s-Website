@@ -14,7 +14,7 @@ body {
   height: 120px;         /* igual que el ancho para mantener proporción */
   object-fit: cover;     /* recorta sin deformar */
   border: 2px solid #e0e6ed;  /* marco limpio */
-  border-radius: 0 !important;          /* <— 0 = esquinas cuadradas, ya no círculo */
+  border-radius: 0;          /* <— 0 = esquinas cuadradas, ya no círculo */
 }
 
 /* Header */
@@ -132,10 +132,10 @@ li {
 
 /* Style the image in About */
 .about-photo img {
-  max-width: 200px;
+  max-width: 500px;
   height: auto;
   border: 2px solid #e0e6ed;
-  border-radius: 0 !important;   /* <— force square corners */
+  border-radius: 0;   /* <— force square corners */
 }
 
 /* Responsive ajustes */
@@ -151,5 +151,6 @@ li {
     text-align: center;
   }
 }
+
 
 
