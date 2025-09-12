@@ -11,8 +11,10 @@ body {
 /* ===== Imagen de perfil ===== */
 .profile-pic img {
   width: 120px;          /* controla ancho */
-  height: 120px;         /* igual que el ancho para mantener círculo */
+  height: 120px;         /* igual que el ancho para mantener proporción */
   object-fit: cover;     /* recorta sin deformar */
+  border: 2px solid #e0e6ed;  /* marco limpio */
+  border-radius: 0;          /* <— 0 = esquinas cuadradas, ya no círculo */
 }
 
 /* Header */
@@ -133,6 +135,7 @@ li {
   max-width: 200px;
   height: auto;
   border: 2px solid #e0e6ed;
+  border-radius: 0;   /* <— force square corners */
 }
 
 /* Responsive ajustes */
@@ -148,6 +151,3 @@ li {
     text-align: center;
   }
 }
-
-
-
