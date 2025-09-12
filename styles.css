@@ -13,7 +13,6 @@ body {
   width: 120px;          /* controla ancho */
   height: 120px;         /* igual que el ancho para mantener círculo */
   object-fit: cover;     /* recorta sin deformar */
-  border-radius: 50%;    /* círculo */
   border: 2px solid #e0e6ed;
 }
 
@@ -151,3 +150,4 @@ li {
     text-align: center;
   }
 }
+
