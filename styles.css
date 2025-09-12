@@ -13,7 +13,6 @@ body {
   width: 120px;          /* controla ancho */
   height: 120px;         /* igual que el ancho para mantener círculo */
   object-fit: cover;     /* recorta sin deformar */
-  border: 2px solid #e0e6ed;
 }
 
 /* Header */
@@ -150,4 +149,5 @@ li {
     text-align: center;
   }
 }
+
 
