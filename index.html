@@ -6,69 +6,59 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
   <header class="site-header" role="banner">
-  <div class="container header-grid">
-    <!-- Bloque de identidad con foto + nombre + contacto -->
-    <div class="identity">
-      <div>
-        <h1 class="site-title">Francisco Santiago</h1>
-        <ul class="contact" role="list">
-          <li><a href="mailto:tu-ucf@ucf.edu">tu-ucf@ucf.edu</a></li>
-          <li><a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
+    <div class="header-content">
+      <!-- identity: photo + name + contact (DIVS only) -->
+      <div class="identity">
+        <div class="profile-pic">
+          <img src="images/profile.jpeg" alt="Professional photo of Francisco Santiago" width="120" height="120">
+        </div>
+        <div class="identity-text">
+          <h1 class="site-title">Francisco Santiago</h1>
+          <ul class="contact" role="list">
+            <li><a href="mailto:tu-ucf@ucf.edu">tu-ucf@ucf.edu</a></li>
+            <li><a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
+
+      <nav aria-label="Primary" class="primary-nav">
+        <ul role="list">
+          <li><a href="#about" aria-current="page">About Me</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="project-1.html">Project 1</a></li>
+          <li><a href="project-2.html">Project 2</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Menú de navegación -->
-    <nav aria-label="Primary" class="primary-nav">
-      <ul role="list">
-        <li><a href="#about" aria-current="page">About Me</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="project-1.html">Project 1</a></li>
-        <li><a href="project-2.html">Project 2</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-  <!-- Contenido principal -->
   <main id="main">
-    <!-- About Me -->
+    <!-- About (DIVS only) -->
     <section id="about">
-  <div class="about-container">
-    
-    <!-- Left side: text -->
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I’m an IT student at the University of Central Florida, passionate about 
-        web development, programming, and technical communication. I’m seeking 
-        opportunities to apply my skills to real-world projects and grow as an 
-        IT professional.
-      </p>
-    </div>
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            I’m an IT student at the University of Central Florida, passionate about web development,
+            programming, and technical communication. I’m seeking opportunities to apply my skills to
+            real-world projects and grow as an IT professional.
+          </p>
+        </div>
 
-    <!-- Right side: photo -->
-    <figure class="about-photo">
-      <img src="images/profile.jpeg" 
-           alt="Professional photo of Francisco Santiago" 
-           width="200" height="200">
-    </figure>
-    
-  </div>
-</section>
+        <div class="about-photo">
+          <img src="images/profile.jpeg" alt="Professional photo of Francisco Santiago" width="200" height="200">
+        </div>
+      </div>
+    </section>
 
     <!-- Resume -->
     <section id="resume">
       <h2>Resume</h2>
 
-      <!-- Objective -->
-      <section class="objective">
-        <h3>Objective</h3>
-        <p>Senior IT student at the University of Central Florida seeking an internship or entry-level IT role to apply skills in web design, programming, and technical communication.</p>
-      </section>
-
-      <!-- Education -->
       <section class="education">
         <h3>Education</h3>
         <article>
@@ -83,7 +73,6 @@
         </article>
       </section>
 
-      <!-- Experience -->
       <section class="experience">
         <h3>Experience</h3>
         <article>
@@ -97,16 +86,6 @@
         </article>
       </section>
 
-      <!-- Projects -->
-      <section class="projects">
-        <h3>Projects</h3>
-        <ul>
-          <li><a href="project-1.html">Project 1: MARIE Assembly Multiplier</a></li>
-          <li><a href="project-2.html">Project 2: UCF Style Guide — Document Design Chapter</a></li>
-        </ul>
-      </section>
-
-      <!-- Skills -->
       <section class="skills">
         <h3>Skills</h3>
         <ul>
@@ -117,19 +96,9 @@
           <li>CompTIA A+ (in progress)</li>
         </ul>
       </section>
-
-      <!-- Awards -->
-      <section class="awards">
-        <h3>Awards & Honors</h3>
-        <ul>
-          <li>Dean’s List, UCF</li>
-          <li>CREAR Peer Mentor Program</li>
-        </ul>
-      </section>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <p><small>&copy; 2025 Francisco Santiago</small></p>
   </footer>
