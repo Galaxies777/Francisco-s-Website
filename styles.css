@@ -19,10 +19,9 @@ body {
 
 /* Header */
 .site-header {
-  border: 3px solid #0a66c2; /* azul LinkedIn */
+  border: 3px solid #000000; /* azul LinkedIn */
   background: #ffffff;              /* ¡valor válido! (antes estaba roto) */
   padding: 1rem 0;
-  margin-bottom: 2rem;
 }
 
 .header-content {
@@ -154,6 +153,7 @@ li {
     text-align: center;
   }
 }
+
 
 
 
