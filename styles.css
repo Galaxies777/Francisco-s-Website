@@ -85,7 +85,7 @@ section {
   margin-bottom: 2rem;
   padding: 1rem;
   background: #ffffff;         /* tarjetas blancas sobre fondo azul */
-  border: 1px solid #e0e6ed;
+  border: 3px solid #000000;
   border-radius: 8px;
 }
 h2 {
@@ -153,3 +153,4 @@ li {
     text-align: center;
   }
 }
+
