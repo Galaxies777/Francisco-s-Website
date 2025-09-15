@@ -5,7 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   background: #f0ffff;        /* gris muy claro, fondo corporativo */
-  color: #ff00aa;             /* texto principal oscuro */
+  color: #1a1a1a;             /* texto principal oscuro */
   padding: 0 1rem;
 }
 
@@ -150,6 +150,7 @@ li {
     text-align: center;
   }
 }
+
 
 
 
