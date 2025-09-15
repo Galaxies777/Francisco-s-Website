@@ -3,7 +3,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background: #F0FFFF;       /* fondo azure */
+  background: #36aebf;       /* fondo azure */
   color: #1a1a1a;            /* texto principal oscuro */
   padding: 0 1rem;
 }
@@ -11,14 +11,12 @@ body {
 .profile-pic {
   width: 120px;      /* ancho fijo */
   height: auto;      /* alto automático para no deformar */
-  border-radius: 50%; /* círculo elegante */
-}
 
 /* Header */
 .site-header {
   border-bottom: 3px solid #0a66c2;   /* azul LinkedIn */
-  background: #ffffff;
-  padding: 1rem 0;
+  background:ffffff #;
+  padding: 2rem 0;
   margin-bottom: 2rem;
 }
 .header-content {
@@ -148,6 +146,7 @@ li {
     text-align: center;
   }
 }
+
 
 
 
