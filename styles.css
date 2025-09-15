@@ -1,156 +1,210 @@
-/* Reset básico */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background: #f4f6f9;        /* gris muy claro, fondo corporativo */
-  color: #1a1a1a;             /* texto principal oscuro */
-  padding: 0 1rem;
+/* ================================
+   Tyler Resume — Corporate Clean (Semantic-first)
+   SOLO CSS
+   ================================ */
+
+/* Reset & base */
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:100%}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  line-height:1.65;
+  background:var(--bg, #f6f8fb);
+  color:var(--text, #101828);
+  padding:0 1rem;
 }
 
-/* ===== Imagen de perfil ===== */
-.profile-pic img {
-  width: 120px;          /* controla ancho */
-  height: 120px;         /* igual que el ancho para mantener proporción */
-  object-fit: cover;     /* recorta sin deformar */
-  border: 2px solid #e0e6ed;  /* marco limpio */
-  border-radius: 0;          /* <— 0 = esquinas cuadradas, ya no círculo */
+/* Tokens (custom properties) */
+:root{
+  --bg:#f6f8fb;
+  --text:#101828;
+  --muted:#667085;
+  --accent:#0a66c2;     /* azul profesional */
+  --accent-2:#244f8a;
+  --surface:#ffffff;
+  --border:#e4e7ec;
+  --radius:12px;
+  --shadow:0 10px 24px rgba(16,24,40,.08);
+  --container:960px;
 }
 
-/* Header */
-.site-header {
-  border-bottom: 3px solid #0a66c2;   /* azul LinkedIn */
-  background: #ffffff;
-  padding: 1rem 0;
-  margin-bottom: 2rem;
-}
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.site-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #0a66c2;   /* azul corporativo */
-}
-
-/* Contact */
-.contact {
-  list-style: none;
-  margin-top: 0.5rem;
-  display: flex;
-  gap: 1rem;
-}
-.contact a {
-  color: #0a66c2;
-  text-decoration: none;
-  font-weight: 500;
-}
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* Nav */
-.primary-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-.primary-nav a {
-  text-decoration: none;
-  color: #1a1a1a;
-  font-weight: bold;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-.primary-nav a:hover {
-  background: #0a66c2;
-  color: #fff;
-}
-
-/* Secciones principales */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1rem 0;
-}
-section {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: #fff;
-  border: 1px solid #e0e6ed;
-  border-radius: 8px;
-}
-h2 {
-  margin-bottom: 1rem;
-  color: #0a66c2;
-  border-bottom: 2px solid #e0e6ed;
-  padding-bottom: 0.3rem;
-}
-h3 {
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-h4 {
-  font-weight: normal;
-  margin-bottom: 0.25rem;
-  color: #555;
-}
-
-/* Listas */
-ul {
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
-}
-li {
-  margin-bottom: 0.3rem;
-}
-
-/* Footer */
-.site-footer {
-  border-top: 3px solid #0a66c2;
-  padding: 1rem 0;
-  text-align: center;
-  margin-top: 3rem;
-  color: #555;
-  background: #ffffff;
-}
-
-/* === ABOUT SECTION === */
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;  /* aligns text and photo at the top */
-  gap: 2rem;
-}
-
-.about-photo { margin: 0; }       /* remove default figure margin */
-.about-text h2 { margin-top: 0; } /* ensure About Me heading aligns with photo */
-
-/* Style the image in About */
-.about-photo img {
-  max-width: 500px;
-  height: auto;
-  border: 2px solid #e0e6ed;
-  border-radius: 0;   /* <— force square corners */
-}
-
-/* Responsive ajustes */
-@media (max-width: 600px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f141b; --text:#e6edf5; --muted:#9aa7b3;
+    --accent:#64b1ff; --accent-2:#8cccff;
+    --surface:#111a24; --border:#1f2b38; --shadow:0 14px 32px rgba(0,0,0,.45);
   }
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  body{background:var(--bg);color:var(--text)}
 }
+
+/* Tipografía y accesibilidad */
+h1{font-size:clamp(1.9rem,3.6vw,2.4rem); letter-spacing:.2px; color:var(--accent)}
+h2{font-size:clamp(1.25rem,2.6vw,1.6rem); margin-bottom:.7rem; color:#0f2a4b}
+h3{font-size:clamp(1.05rem,2.2vw,1.25rem); margin-bottom:.5rem}
+h4{font-weight:600; color:#344054; margin-bottom:.25rem}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--accent); outline-offset:2px}
+
+/* Layout genérico */
+.container{max-width:var(--container); margin:0 auto; padding:0 1rem}
+main{max-width:var(--container); margin:0 auto; padding:1rem 0}
+section{
+  margin-bottom:2rem; padding:1.2rem 1.2rem;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* ---------- Header semántico ---------- */
+header.site-header{
+  background:var(--surface);
+  border-bottom:3px solid var(--accent);
+  margin-bottom:2rem;
+}
+header.site-header .container{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; flex-wrap:wrap; padding:1rem 0;
+}
+
+/* Identidad: figura + título + address (semántico) */
+header.site-header .identity{display:flex; align-items:center; gap:1rem}
+header.site-header figure{margin:0}
+header.site-header figure img{
+  width:96px; height:96px; object-fit:cover;
+  border-radius:12px;            /* pon 50% si quieres circular */
+  border:2px solid var(--border);
+  display:block;
+}
+header.site-header h1{margin:0}
+
+/* Address para contacto: usa <address> en HTML */
+header.site-header address{
+  font-style:normal;
+  margin-top:.4rem;
+}
+header.site-header address ul{
+  list-style:none; display:flex; gap:1rem; flex-wrap:wrap; padding:0; margin:0;
+}
+header.site-header address a{color:var(--accent); font-weight:500}
+
+/* Nav principal (usa <nav aria-label="Primary">) */
+nav[aria-label="Primary"] ul{list-style:none; display:flex; gap:.7rem; flex-wrap:wrap; padding:0; margin:0}
+nav[aria-label="Primary"] a{
+  color:inherit; font-weight:700; padding:.4rem .7rem; border-radius:10px;
+  border:1px solid transparent; transition:background .2s, color .2s, border-color .2s;
+}
+nav[aria-label="Primary"] a:hover{background:var(--accent); color:#fff; border-color:var(--accent)}
+nav[aria-label="Primary"] a[aria-current="page"]{
+  background:rgba(10,102,194,.10);
+  border-color:rgba(10,102,194,.35);
+}
+
+/* ---------- About semántico ---------- */
+/* Estructura esperada:
+<section id="about">
+  <div class="container">
+    <div class="media">
+      <div> (texto + h2) </div>
+      <figure> <img> </figure>
+    </div>
+  </div>
+</section>
+*/
+#about .container .media{
+  display:flex; align-items:flex-start; justify-content:space-between; gap:2rem;
+}
+#about h2{margin-top:0}
+#about figure{margin:0}
+#about figure img{
+  width:220px; height:auto; border-radius:12px; border:2px solid var(--border);
+  display:block;
+}
+#about .meta{list-style:none; margin-top:.7rem; display:flex; gap:1rem; flex-wrap:wrap; padding-left:0}
+#about .cta{margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap}
+
+/* Botones genéricos (si usas <a class="btn">) */
+a.btn{
+  display:inline-block; padding:.55rem .9rem; border-radius:10px;
+  background:var(--accent); color:#fff; border:1px solid var(--accent);
+  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+}
+a.btn:hover{transform:translateY(-1px); background:var(--accent-2); border-color:var(--accent-2)}
+a.btn.ghost{background:transparent; color:var(--accent); border-color:var(--accent)}
+a.btn.ghost:hover{background:rgba(10,102,194,.08)}
+
+/* ---------- Timeline semántico (Education & Experience) ---------- */
+/* HTML sugerido:
+<section class="education"> <h3>...</h3> <div class="timeline"> <article> ... </article> </div> </section>
+*/
+section.education .timeline,
+section.experience .timeline{
+  display:grid; gap:1rem; margin-top:.5rem;
+}
+section.education article,
+section.experience article{
+  position:relative; padding-left:1rem; border-left:2px solid var(--border); margin-left:.25rem;
+}
+section.education article::before,
+section.experience article::before{
+  content:""; position:absolute; left:-7px; top:.35rem;
+  width:10px; height:10px; border-radius:50%; background:var(--accent);
+}
+
+/* ---------- Projects semántico ---------- */
+/* HTML sugerido:
+<section id="projects"><ul class="grid"><li class="card">...</li> ... </ul></section>
+*/
+#projects .grid{list-style:none; padding:0; margin:0; display:grid; gap:1rem; grid-template-columns:1fr}
+@media (min-width:760px){ #projects .grid{grid-template-columns:repeat(2,1fr)} }
+#projects .card{
+  padding:1rem; border:1px solid var(--border); border-radius:var(--radius); background:var(--surface);
+  transition:box-shadow .2s ease, transform .08s ease, border-color .2s ease;
+}
+#projects .card:hover{transform:translateY(-1px); box-shadow:0 8px 22px rgba(16,24,40,.08); border-color:#d8dee6}
+#projects .card a.btn.small{padding:.45rem .7rem; font-size:.95rem; margin-top:.6rem}
+
+/* ---------- Skills semántico ---------- */
+/* HTML sugerido:
+<section class="skills"><h3>Skills</h3><ul class="list-pills"><li>...</li></ul></section>
+*/
+section.skills .list-pills{
+  list-style:none; padding:0; margin-top:.5rem; display:flex; gap:.5rem; flex-wrap:wrap;
+}
+section.skills .list-pills li{
+  padding:.35rem .65rem; border:1px solid var(--border);
+  border-radius:999px; background:var(--surface);
+}
+
+/* ---------- Footer semántico ---------- */
+footer.site-footer{
+  background:var(--surface); color:#667085; text-align:center;
+  border-top:3px solid var(--accent); padding:1rem 0; margin-top:3rem;
+}
+
+/* Skip link accesible (si usas .skip-link) */
+.skip-link{
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{
+  position:static; width:auto; height:auto; padding:.4rem .75rem;
+  background:var(--accent); color:#fff; border-radius:8px;
+}
+
+/* Responsive */
+@media (max-width:760px){
+  header.site-header .container{flex-direction:column; align-items:flex-start; gap:1rem}
+  #about .container .media{flex-direction:column; align-items:center; text-align:center}
+}
+
+/* Print */
+@media print{
+  body{background:#fff; color:#000}
+  header.site-header, footer.site-footer{border:0; box-shadow:none}
+  section{box-shadow:none}
+}
+
 
 
 
