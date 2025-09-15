@@ -1,3 +1,6 @@
+body { background:#F0FFFF !important; outline:8px solid magenta !important; }
+
+
 /* Reset básico */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -149,4 +152,5 @@ li {
     text-align: center;
   }
 }
+
 
