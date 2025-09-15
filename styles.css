@@ -1,30 +1,36 @@
 /* Reset básico */
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background: #36AEBF;       /* fondo azure */
+  background: #36AEBF;       /* fondo azul (tu captura) */
   color: #1a1a1a;            /* texto principal oscuro */
   padding: 0 1rem;
 }
 
+/* ===== Imagen de perfil ===== */
 .profile-pic {
-  width: 120px;      /* ancho fijo */
-  height: auto;      /* alto automático para no deformar */
-  border-radius: 50%;
+  width: 120px;                 /* ancho fijo */
+  height: auto;                 /* alto automático para no deformar */
+  border-radius: 50%;           /* círculo elegante (ajústalo si quieres cuadrado) */
+}
+
 /* Header */
 .site-header {
-  border-bottom: 3px solid #0a66c2;   /* azul LinkedIn */
-  background:#ffffff;
-  padding: 2rem 0;
+  border-bottom: 3px solid #0a66c2; /* azul LinkedIn */
+  background: #ffffff;              /* ¡valor válido! (antes estaba roto) */
+  padding: 1rem 0;
   margin-bottom: 2rem;
 }
+
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .site-title {
   font-size: 2rem;
   font-weight: bold;
@@ -37,6 +43,7 @@ body {
   margin-top: 0.5rem;
   display: flex;
   gap: 1rem;
+  padding-left: 0;
 }
 .contact a {
   color: #0a66c2;
@@ -52,6 +59,8 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+  padding-left: 0;
+  margin: 0;
 }
 .primary-nav a {
   text-decoration: none;
@@ -75,7 +84,7 @@ main {
 section {
   margin-bottom: 2rem;
   padding: 1rem;
-  background: #ffffff;       /* tarjetas blancas */
+  background: #ffffff;         /* tarjetas blancas sobre fondo azul */
   border: 1px solid #e0e6ed;
   border-radius: 8px;
 }
@@ -95,7 +104,7 @@ h4 {
   color: #555;
 }
 
-/* Listas */
+/* Listas (contenido) */
 ul {
   margin-left: 1.5rem;
   margin-top: 0.5rem;
@@ -118,14 +127,12 @@ li {
 .about-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;  /* aligns text and photo at the top */
+  align-items: flex-start;  /* alinea texto y foto arriba */
   gap: 2rem;
 }
+.about-photo { margin: 0; }       /* si usas <figure>, quita margen por defecto */
+.about-text h2 { margin-top: 0; } /* título alineado con la foto */
 
-.about-photo { margin: 0; }       /* remove default figure margin */
-.about-text h2 { margin-top: 0; } /* ensure About Me heading aligns with photo */
-
-/* Style the image in About */
 .about-photo img {
   max-width: 500px;
   height: auto;
@@ -146,11 +153,3 @@ li {
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
