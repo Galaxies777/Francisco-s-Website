@@ -35,6 +35,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: #0a66c2;   /* azul corporativo */
+  margin-left: 20px;
 }
 
 /* Contact */
@@ -153,6 +154,7 @@ li {
     text-align: center;
   }
 }
+
 
 
 
