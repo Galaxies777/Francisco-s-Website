@@ -1,2 +1,152 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: #f4f6f9;        /* gris muy claro, fondo corporativo */
+  color: #1a1a1a;             /* texto principal oscuro */
+  padding: 0 1rem;
+}
 
+.profile-pic {
+  width: 120px;      /* ancho fijo */
+  height: auto;      /* alto automático para no deformar */
+  border-radius: 50%; /* círculo elegante */
+}
+
+
+/* Header */
+.site-header {
+  border-bottom: 3px solid #0a66c2;   /* azul LinkedIn */
+  background: #ffffff;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.site-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0a66c2;   /* azul corporativo */
+}
+
+/* Contact */
+.contact {
+  list-style: none;
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.contact a {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 500;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Nav */
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.primary-nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.primary-nav a:hover {
+  background: #0a66c2;
+  color: #fff;
+}
+
+/* Secciones principales */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+}
+h2 {
+  margin-bottom: 1rem;
+  color: #0a66c2;
+  border-bottom: 2px solid #e0e6ed;
+  padding-bottom: 0.3rem;
+}
+h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+h4 {
+  font-weight: normal;
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+
+/* Listas */
+ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+li {
+  margin-bottom: 0.3rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 3px solid #0a66c2;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 3rem;
+  color: #555;
+  background: #ffffff;
+}
+
+/* === ABOUT SECTION === */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;  /* aligns text and photo at the top */
+  gap: 2rem;
+}
+
+.about-photo { margin: 0; }       /* remove default figure margin */
+.about-text h2 { margin-top: 0; } /* ensure About Me heading aligns with photo */
+
+/* Style the image in About */
+.about-photo img {
+  max-width: 500px;
+  height: auto;
+  border: 2px solid #e0e6ed;
+  border-radius: 0;   /* <— force square corners */
+}
+
+/* Responsive ajustes */
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 
