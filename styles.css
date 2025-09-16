@@ -62,31 +62,37 @@ body {
   text-decoration: none;   /* mantiene sin subrayado */
 }
 
-/* Nav */
+/* Contenedor del menú */
 .primary-nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  padding-left: 0;
+  padding: 0;
   margin: 0;
 }
+
+.primary-nav {
+  display: inline-block;        /* se comporta como una "placa" */
+  background-color: #333;       /* fondo oscuro */
+  border: 2px solid #000;       /* borde negro */
+  border-radius: 0;             /* esquinas cuadradas */
+}
+
+/* Links dentro del menú */
 .primary-nav a {
-  display: inline-block;         /* se comportan como bloques pequeños */
-  background-color: #333;        /* fondo oscuro */
-  color: #fff;                   /* texto blanco */
+  color: #fff;                  /* texto blanco */
   font-weight: bold;
   text-decoration: none;
-  padding: 0.5rem 1rem;          /* espacio interno */
-  border: 2px solid #000;        /* borde negro */
-  border-radius: 0;              /* esquinas cuadradas */
+  padding: 0.5rem 1rem;
+  display: block;               /* cada link ocupa su espacio dentro de la barra */
   transition: background 0.2s, color 0.2s;
 }
 
+/* Hover en links */
 .primary-nav a:hover {
-  background-color: #0a66c2;     /* azul profesional al hover */
+  background-color: #0a66c2;    /* azul profesional */
   color: #fff;
-  border-color: #0a66c2;
 }
+
 
 
 /* Secciones principales */
@@ -193,5 +199,6 @@ main {
     text-align: center;
   }
 }
+
 
 
