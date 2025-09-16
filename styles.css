@@ -39,24 +39,25 @@ body {
   border-radius: 0;
 }
 
-/* Contact bar (fila con fondo, sin convertirlo en un bloque único) */
+/* Contact bar (vertical, alineado a la izquierda) */
 .contact {
   list-style: none;
   margin-top: 0.5rem;
-  display: flex;              /* mantiene los items en fila */
-  gap: 1rem;                  /* espacio entre email / LinkedIn / phone */
-  padding: 0.5rem 1rem;       /* aire dentro de la barra */
-  font-weight: 700;           /* texto en bold */
+  display: flex;
+  flex-direction: column;     /* apila los items en columna */
+  align-items: flex-start;    /* alinea a la izquierda */
+  gap: 0.5rem;                /* espacio entre items */
+  padding: 0.5rem 1rem;
+  font-weight: 700;
   background-color: #36AEBF;  /* Medium Azure */
-  border: 2px solid #000;     /* borde negro */
-  border-radius: 0;           /* esquinas cuadradas */
+  border: 2px solid #000;
+  border-radius: 0;
 }
 .contact li { margin: 0; padding: 0; }
 .contact a {
   color: #fff;
   text-decoration: none;
   padding: 0.25rem 0;
-  display: inline-block;
   transition: color .2s;
 }
 .contact a:hover { color: #000; }
@@ -168,17 +169,4 @@ main { flex: 1; }
     align-items: center;
     text-align: center;
   }
-}
-
-/* === ALINEACIÓN NOMBRE, MENÚ Y CONTACTO === */
-.header-content {
-  flex-direction: column;    /* stack items vertically */
-  align-items: flex-start;   /* align all to the left edge */
-  gap: 0.5rem;
-}
-.site-title,
-.primary-nav,
-.contact {
-  align-self: flex-start;
-  margin-left: 0;
 }
