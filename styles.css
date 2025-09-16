@@ -10,101 +10,82 @@ body {
 
 /* ===== Imagen de perfil ===== */
 .profile-pic {
-  width: 120px;                 /* ancho fijo */
-  height: auto;                 /* alto automático para no deformar */
-  border-radius: 50%;           /* círculo elegante (ajústalo si quieres cuadrado) */
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
 }
 
 /* Header */
 .site-header {
-  border: 3px solid #000000;        /* borde negro */
-  border-radius: 10px;              /* esquinas redondeadas */
-  background: #ffffff;              /* fondo blanco */
+  border: 3px solid #000000;
+  border-radius: 10px;
+  background: #ffffff;
   padding: 1rem 1.5rem;
   margin-bottom: 2rem;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12); /* sombra sutil */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
-
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-
 .site-title {
-  display: inline-block;       /* para que el fondo se ajuste al texto */
-  background-color: #333;      /* color de fondo (oscuro profesional) */
-  color: #fff;                 /* texto en blanco */
-  padding: 0.5rem 1rem;        /* espacio interno */
-  border: 2px solid #000;      /* borde negro */
-  border-radius: 0;            /* esquinas cuadradas */
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  border-radius: 0;
 }
 
-
-/* Contact info as a single bar like the menu */
+/* Contact bar (fila con fondo, sin convertirlo en un bloque único) */
 .contact {
   list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 1rem 0 0 0;   /* un poco de espacio arriba */
+  margin-top: 0.5rem;
+  display: flex;              /* mantiene los items en fila */
+  gap: 1rem;                  /* espacio entre email / LinkedIn / phone */
+  padding: 0.5rem 1rem;       /* aire dentro de la barra */
+  font-weight: 700;           /* texto en bold */
+  background-color: #36AEBF;  /* Medium Azure */
+  border: 2px solid #000;     /* borde negro */
+  border-radius: 0;           /* esquinas cuadradas */
 }
-
-.contact {
-  display: inline-block;
-  background-color: #36AEBF;    /* Medium Azure background */
-  border: 2px solid #000;       /* borde negro */
-  border-radius: 0;             /* esquinas cuadradas */
-}
-
-/* Links inside the contact bar */
+.contact li { margin: 0; padding: 0; }
 .contact a {
-  color: #fff;                  /* texto blanco */
-  font-weight: bold;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: block;
-  transition: background 0.2s, color 0.2s;
-}
-
-/* Hover effect */
-.contact a:hover {
-  background-color: #0a66c2;    /* azul corporativo más oscuro */
   color: #fff;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  display: inline-block;
+  transition: color .2s;
 }
+.contact a:hover { color: #000; }
 
-/* Contenedor del menú */
+/* Menú unido como barra */
 .primary-nav ul {
   list-style: none;
   display: flex;
   padding: 0;
   margin: 0;
 }
-
 .primary-nav {
-  display: inline-block;        /* se comporta como una "placa" */
-  background-color: #333;       /* fondo oscuro */
-  border: 2px solid #000;       /* borde negro */
-  border-radius: 0;             /* esquinas cuadradas */
+  display: inline-block;
+  background-color: #333;
+  border: 2px solid #000;
+  border-radius: 0;
 }
-
-/* Links dentro del menú */
 .primary-nav a {
-  color: #fff;                  /* texto blanco */
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  display: block;               /* cada link ocupa su espacio dentro de la barra */
+  display: block;
   transition: background 0.2s, color 0.2s;
 }
-
-/* Hover en links */
 .primary-nav a:hover {
-  background-color: #0a66c2;    /* azul profesional */
+  background-color: #0a66c2;
   color: #fff;
 }
-
-
 
 /* Secciones principales */
 main {
@@ -115,7 +96,7 @@ main {
 section {
   margin-bottom: 2rem;
   padding: 1rem;
-  background: #ffffff;         /* tarjetas blancas sobre fondo azul */
+  background: #ffffff;
   border: 3px solid #000000;
   border-radius: 8px;
 }
@@ -125,50 +106,29 @@ h2 {
   border-bottom: 2px solid #e0e6ed;
   padding-bottom: 0.3rem;
 }
-h3 {
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-h4 {
-  font-weight: normal;
-  margin-bottom: 0.25rem;
-  color: #555;
-}
+h3 { margin-bottom: 0.5rem; color: #333; }
+h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
 
 /* Listas (contenido) */
-ul {
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
-}
-li {
-  margin-bottom: 0.3rem;
-}
+ul { margin-left: 1.5rem; margin-top: 0.5rem; }
+li { margin-bottom: 0.3rem; }
 
 /* Layout para empujar el footer al fondo */
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-/* El body es el contenedor flex vertical */
+html, body { height: 100%; margin: 0; }
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* asegura altura de la ventana */
+  min-height: 100vh;
 }
+main { flex: 1; }
 
-/* El main ocupa el espacio disponible */
-main {
-  flex: 1;
-}
-
-/* Footer (fuera de main, no anidado) */
+/* Footer (global) */
 .site-footer {
-  width: 100%;                  /* ocupa todo el ancho */
-  background-color: #333;       /* gris oscuro */
-  color: #fff;                  /* texto blanco */
-  font-weight: bold;            /* texto en negrita */
-  border-top: 2px solid #000;   /* línea negra arriba (outline) */
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  border-top: 2px solid #000;
   text-align: center;
   padding: 1rem 0;
   margin-top: 3rem;
@@ -178,20 +138,19 @@ main {
 .about-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;  /* alinea texto y foto arriba */
+  align-items: flex-start;
   gap: 2rem;
 }
-.about-photo { margin: 0; }       /* si usas <figure>, quita margen por defecto */
-.about-text h2 { margin-top: 0; } /* título alineado con la foto */
-
+.about-photo { margin: 0; }
+.about-text h2 { margin-top: 0; }
 .about-photo img {
   max-width: 500px;
   height: auto;
-  border: 1px solid #000; /* línea negra de 1px */
-  border-radius: 0;       /* esquinas cuadradas */
+  border: 1px solid #000;
+  border-radius: 0;
 }
 
-/* Footer dentro de la sección About */
+/* Footer cuando está dentro de About */
 #about .site-footer {
   margin-top: 2rem;
   border-radius: 6px;
@@ -210,7 +169,3 @@ main {
     text-align: center;
   }
 }
-
-
-
-
