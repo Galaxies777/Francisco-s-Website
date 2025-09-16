@@ -131,16 +131,17 @@ html, body {
 
 main {
   flex: 1;                  /* ocupa el espacio disponible */
-}
-
+/* Footer */
 .site-footer {
-  background: #333333;      /* dark gray */
-  color: #ffffff;           /* white text */
-  font-size: 1rem;          /* medium size */
-  font-weight: 700;         /* bold */
+  width: 100%;                     /* spans full width of page */
+  background-color: #333333;        /* dark gray background */
+  color: #ffffff;                   /* white text */
+  font-weight: bold;                /* bold text */
+  border-top: 2px solid #000000;    /* black outline on top */
   text-align: center;
   padding: 1rem 0;
-  margin-top: auto;         /* empuja el footer hacia abajo */
+  margin-top: 3rem;
+}
 }
 
 
@@ -174,6 +175,7 @@ main {
     text-align: center;
   }
 }
+
 
 
 
