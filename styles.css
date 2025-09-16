@@ -33,11 +33,14 @@ body {
 }
 
 .site-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333333;   /* azul corporativo */
-  margin-left: 20px;
+  display: inline-block;       /* para que el fondo se ajuste al texto */
+  background-color: #333;      /* color de fondo (oscuro profesional) */
+  color: #fff;                 /* texto en blanco */
+  padding: 0.5rem 1rem;        /* espacio interno */
+  border: 2px solid #000;      /* borde negro */
+  border-radius: 0;            /* esquinas cuadradas */
 }
+
 
 /* Contact */
 .contact {
@@ -184,3 +187,4 @@ main {
     text-align: center;
   }
 }
+
