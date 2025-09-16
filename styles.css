@@ -1,4 +1,4 @@
-/* dontgetabonerdontgetabonerdontgetaboner */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -120,28 +120,34 @@ ul {
 li {
   margin-bottom: 0.3rem;
 }
-
 /* Layout para empujar el footer al fondo */
 html, body {
-  height: 100%;             /* que ocupe toda la altura */
-  margin: 0;                /* resetea márgenes */
+  height: 100%;
+  margin: 0;
+}
+
+/* El body es el contenedor flex vertical */
+body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* asegura altura de la ventana */
 }
 
+/* El main ocupa el espacio disponible */
 main {
-  /* Footer */
+  flex: 1;
+}
+
+/* Footer (fuera de main, no anidado) */
 .site-footer {
-  width: 100%;                     /* stretches across the page */
-  background-color: #333;           /* dark gray */
-  color: #fff;                      /* white text */
-  font-weight: bold;                /* bold text */
-  border-top: 2px solid #000;       /* black outline on top */
-  text-align: center;               /* center the text */
+  width: 100%;                  /* ocupa todo el ancho */
+  background-color: #333;       /* gris oscuro */
+  color: #fff;                  /* texto blanco */
+  font-weight: bold;            /* texto en negrita */
+  border-top: 2px solid #000;   /* línea negra arriba (outline) */
+  text-align: center;
   padding: 1rem 0;
   margin-top: 3rem;
-}
-
 }
 
 
@@ -175,6 +181,7 @@ main {
     text-align: center;
   }
 }
+
 
 
 
