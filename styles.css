@@ -121,16 +121,26 @@ li {
   margin-bottom: 0.3rem;
 }
 
-/* Footer */
+/* Layout para empujar el footer al fondo */
+html, body {
+  height: 100%;             /* que ocupe toda la altura */
+  margin: 0;                /* resetea márgenes */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;                  /* ocupa el espacio disponible */
+}
+
 .site-footer {
-  background: #333333;     /* dark gray */
-  color: #ffffff;          /* white text */
-  font-size: 1rem;         /* medium size */
-  font-weight: 700;        /* bold */
+  background: #333333;      /* dark gray */
+  color: #ffffff;           /* white text */
+  font-size: 1rem;          /* medium size */
+  font-weight: 700;         /* bold */
   text-align: center;
   padding: 1rem 0;
-  margin-top: 2rem;
-  border-top: 2px solid #000;  /* optional: black accent border */
+  margin-top: auto;         /* empuja el footer hacia abajo */
 }
 
 
@@ -164,6 +174,7 @@ li {
     text-align: center;
   }
 }
+
 
 
 
