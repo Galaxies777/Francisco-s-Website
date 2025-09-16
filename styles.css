@@ -49,10 +49,10 @@ body {
   gap: 1rem;
   padding-left: 0;
 }
-.contact a {
-  color: #0a66c2;
-  text-decoration: none;
-  font-weight: 500;
+.contact li:first-child a {
+  font-weight: 700;   /* más bold */
+  color: #333333;     /* gris oscuro (puedes cambiar a #000 para negro puro) */
+}
 }
 .contact a:hover {
   text-decoration: underline;
@@ -157,6 +157,7 @@ li {
     text-align: center;
   }
 }
+
 
 
 
