@@ -71,17 +71,23 @@ body {
   margin: 0;
 }
 .primary-nav a {
-  text-decoration: none;
-  color: #1a1a1a;
+  display: inline-block;         /* se comportan como bloques pequeños */
+  background-color: #333;        /* fondo oscuro */
+  color: #fff;                   /* texto blanco */
   font-weight: bold;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  transition: background 0.2s;
+  text-decoration: none;
+  padding: 0.5rem 1rem;          /* espacio interno */
+  border: 2px solid #000;        /* borde negro */
+  border-radius: 0;              /* esquinas cuadradas */
+  transition: background 0.2s, color 0.2s;
 }
+
 .primary-nav a:hover {
-  background: #0a66c2;
+  background-color: #0a66c2;     /* azul profesional al hover */
   color: #fff;
+  border-color: #0a66c2;
 }
+
 
 /* Secciones principales */
 main {
@@ -187,4 +193,5 @@ main {
     text-align: center;
   }
 }
+
 
