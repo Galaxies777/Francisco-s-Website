@@ -42,24 +42,35 @@ body {
 }
 
 
-/* Contact */
+/* Contact info as a single bar like the menu */
 .contact {
   list-style: none;
-  margin-top: 0.5rem;
   display: flex;
-  gap: 1rem;
-  padding-left: 0;
-  font-weight: 700;        /* todo en bold */
+  padding: 0;
+  margin: 1rem 0 0 0;   /* un poco de espacio arriba */
 }
 
+.contact {
+  display: inline-block;
+  background-color: #36AEBF;    /* Medium Azure background */
+  border: 2px solid #000;       /* borde negro */
+  border-radius: 0;             /* esquinas cuadradas */
+}
+
+/* Links inside the contact bar */
 .contact a {
-  color: #333333;          /* gris oscuro */
-  text-decoration: none;   /* sin subrayado */
+  color: #fff;                  /* texto blanco */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background 0.2s, color 0.2s;
 }
 
+/* Hover effect */
 .contact a:hover {
-  color: #36AEBF;          /* Medium Azure al pasar el mouse */
-  text-decoration: none;   /* mantiene sin subrayado */
+  background-color: #0a66c2;    /* azul corporativo más oscuro */
+  color: #fff;
 }
 
 /* Contenedor del menú */
@@ -199,6 +210,7 @@ main {
     text-align: center;
   }
 }
+
 
 
 
