@@ -1,4 +1,3 @@
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -8,7 +7,6 @@ body {
   color: #1a1a1a;
   padding: 0 1rem;
 }
-
 
 /* ===== Imagen de perfil ===== */
 .profile-pic {
@@ -60,7 +58,6 @@ body {
   color: #36AEBF;          /* Medium Azure al pasar el mouse */
   text-decoration: none;   /* mantiene sin subrayado */
 }
-
 
 /* Nav */
 .primary-nav ul {
@@ -120,6 +117,7 @@ ul {
 li {
   margin-bottom: 0.3rem;
 }
+
 /* Layout para empujar el footer al fondo */
 html, body {
   height: 100%;
@@ -150,7 +148,6 @@ main {
   margin-top: 3rem;
 }
 
-
 /* === ABOUT SECTION === */
 .about-container {
   display: flex;
@@ -164,8 +161,14 @@ main {
 .about-photo img {
   max-width: 500px;
   height: auto;
-  border: 2px solid #e0e6ed;
-  border-radius: 0;   /* esquinas cuadradas */
+  border: 1px solid #000; /* línea negra de 1px */
+  border-radius: 0;       /* esquinas cuadradas */
+}
+
+/* Footer dentro de la sección About */
+#about .site-footer {
+  margin-top: 2rem;
+  border-radius: 6px;
 }
 
 /* Responsive ajustes */
@@ -181,19 +184,3 @@ main {
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
