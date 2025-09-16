@@ -130,18 +130,18 @@ html, body {
 }
 
 main {
-  flex: 1;                  /* ocupa el espacio disponible */
-/* Footer */
+  /* Footer */
 .site-footer {
-  width: 100%;                     /* spans full width of page */
-  background-color: #333333;        /* dark gray background */
-  color: #ffffff;                   /* white text */
+  width: 100%;                     /* stretches across the page */
+  background-color: #333;           /* dark gray */
+  color: #fff;                      /* white text */
   font-weight: bold;                /* bold text */
-  border-top: 2px solid #000000;    /* black outline on top */
-  text-align: center;
+  border-top: 2px solid #000;       /* black outline on top */
+  text-align: center;               /* center the text */
   padding: 1rem 0;
   margin-top: 3rem;
 }
+
 }
 
 
@@ -175,6 +175,7 @@ main {
     text-align: center;
   }
 }
+
 
 
 
