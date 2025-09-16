@@ -48,16 +48,19 @@ body {
   display: flex;
   gap: 1rem;
   padding-left: 0;
+  font-weight: 700;        /* todo en bold */
 }
-.contact li:first-child a {
-  font-weight: 400;   /* más bold */
-  color: #333333; 
-  text-decoration: none;
+
+.contact a {
+  color: #333333;          /* gris oscuro */
+  text-decoration: none;   /* sin subrayado */
 }
-}
+
 .contact a:hover {
-  text-decoration: underline;
+  color: #36AEBF;          /* Medium Azure al pasar el mouse */
+  text-decoration: none;   /* mantiene sin subrayado */
 }
+
 
 /* Nav */
 .primary-nav ul {
@@ -158,6 +161,7 @@ li {
     text-align: center;
   }
 }
+
 
 
 
