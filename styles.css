@@ -41,26 +41,31 @@ body {
 
 /* Nombre */
 .site-title {
-  display: inline-block;
+  display: block;
   background-color: #333;
   color: #fff;
   padding: 0.5rem 1rem;
   border: 2px solid #000;
   border-radius: 0;
   font-weight: 700;
+  margin: 0;           /* <-- quita margen */
+  align-self: flex-start; /* fuerza alineación a la esquina */
 }
 
-/* Barra de contacto (email + LinkedIn) */
+/* Barra de contacto */
 .contact {
   list-style: none;
   display: flex;
   gap: 1rem;
   padding: 0.5rem 1rem;
   font-weight: 700;
-  background-color: #36AEBF;  /* Medium Azure */
+  background-color: #36AEBF;
   border: 2px solid #000;
   border-radius: 0;
+  margin: 0;           /* <-- quita margen */
+  align-self: flex-start; /* arranca desde la esquina */
 }
+
 .contact li { margin: 0; padding: 0; }
 .contact a {
   color: #fff;
@@ -164,5 +169,6 @@ li { margin-bottom: 0.3rem; }
     text-align: center;
   }
 }
+
 
 
