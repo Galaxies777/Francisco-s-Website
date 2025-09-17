@@ -28,7 +28,7 @@ body {
   justify-content: space-between; /* izquierda (identidad) | derecha (menú) */
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* permite que baje en pantallas chicas */
 }
 
 /* Bloque izquierdo (nombre + contactos) */
@@ -63,7 +63,7 @@ body {
   border: 2px solid #000;
   border-radius: 0;
   margin: 0;
-  align-self: flex-start;
+  align-self: flex-start; /* arranca desde la esquina */
 }
 .contact li { margin: 0; padding: 0; }
 .contact a {
@@ -151,16 +151,14 @@ li { margin-bottom: 0.3rem; }
   display: inline-block;
   border-radius: 4px;
   border: 2px solid #000;   /* borde negro */
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;         /* sin espacio debajo */
 }
-#about h2::after,
-#mission h2::after {
-  content: "";
-  display: block;
-  height: 2px;
-  background-color: #0a66c2; /* azul */
-  margin-top: 0.4rem;
-  width: 100%;
+
+/* línea azul fuera del rectángulo, en la tarjeta */
+#about,
+#mission {
+  border-top: 6px solid #0a66c2; /* línea azul arriba de la sección */
+  padding-top: 1rem;             /* espacio después de la línea */
 }
 
 /* ========= FOOTER ========= */
@@ -183,7 +181,7 @@ li { margin-bottom: 0.3rem; }
 @media (max-width: 700px) {
   .header-content {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start;  /* nombre/contacto arriba; menú baja */
   }
   .primary-nav { width: 100%; }
   .primary-nav ul {
