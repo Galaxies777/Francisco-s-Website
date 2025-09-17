@@ -145,24 +145,20 @@ li { margin-bottom: 0.3rem; }
 /* === SPECIAL TITLES: About & Mission === */
 #about h2,
 #mission h2 {
-  background-color: #555;   /* rectángulo gris */
-  color: #fff;              /* letras blancas */
+  background-color: #555;   /* grey rectangle */
+  color: #fff;              /* white text */
   padding: 0.5rem 1rem;
   display: inline-block;
-  border: 2px solid #000;   /* borde negro */
+  border: 2px solid #000;   /* black border */
   border-radius: 4px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;      /* spacing before blue line */
 }
 
-/* Línea azul debajo del título, en el área blanca */
-#about h2::after,
-#mission h2::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background-color: #0a66c2; /* azul corporativo */
-  margin-top: 0.5rem;
-  width: 100%;
+/* Blue line BELOW the grey title, inside white card */
+#about .about-text,
+#mission .about-text {
+  border-top: 3px solid #0a66c2; /* blue line */
+  padding-top: 1rem;             /* spacing before text */
 }
 
 /* ========= FOOTER ========= */
