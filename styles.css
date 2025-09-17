@@ -39,7 +39,6 @@ body {
   gap: .5rem;
 }
 
-/* Nombre */
 .site-title {
   display: block;
   font-family: 'Roboto', sans-serif;
@@ -49,10 +48,10 @@ body {
   padding: 0.5rem 1rem;
   border: 2px solid #000;
   border-radius: 0;
-  font-weight: 700;
-  margin: 0;           /* <-- quita margen */
-  align-self: flex-start; /* fuerza alineación a la esquina */
+  margin: 0;
+  align-self: flex-start;
 }
+
 
 /* Barra de contacto */
 .contact {
@@ -171,6 +170,7 @@ li { margin-bottom: 0.3rem; }
     text-align: center;
   }
 }
+
 
 
 
