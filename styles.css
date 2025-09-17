@@ -1,21 +1,16 @@
-/* ========= RESET + GRADIENT FIX ========= */
+/* ========= RESET ========= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Put the gradient on both roots and pin it */
-html, body { min-height: 100%; }
-html {
-  background: linear-gradient(to bottom, #36AEBF 0%, #E0FFFF 100%);
-  background-attachment: fixed;    /* keep it continuous on long pages */
-  background-repeat: no-repeat;
-}
+html, body { height: 100%; }
 body {
-  background: transparent !important;  /* let the html gradient show through */
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
   color: #1a1a1a;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ========= HEADER ========= */
@@ -33,7 +28,7 @@ body {
   justify-content: space-between; /* izquierda (identidad) | derecha (menú) */
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap; /* permite que baje en pantallas chicas */
+  flex-wrap: wrap;
 }
 
 /* Bloque izquierdo (nombre + contactos) */
@@ -68,7 +63,7 @@ body {
   border: 2px solid #000;
   border-radius: 0;
   margin: 0;
-  align-self: flex-start; /* arranca desde la esquina */
+  align-self: flex-start;
 }
 .contact li { margin: 0; padding: 0; }
 .contact a {
@@ -119,8 +114,6 @@ section {
   border: 3px solid #000000;
   border-radius: 8px;
 }
-
-/* General section headers */
 h2 {
   margin-bottom: 1rem;
   color: #0a66c2;
@@ -132,18 +125,6 @@ h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
 
 ul { margin-left: 1.5rem; margin-top: 0.5rem; }
 li { margin-bottom: 0.3rem; }
-
-/* ========= ABOUT & MISSION SPECIAL HEADINGS ========= */
-#about h2,
-#mission h2 {
-  background-color: #555;   /* gray rectangle */
-  color: #fff;              /* white text */
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  border-radius: 4px;
-  border: 2px solid #000;   /* black outline */
-  margin-bottom: 1rem;
-}
 
 /* ========= ABOUT ========= */
 .about-container {
@@ -159,6 +140,27 @@ li { margin-bottom: 0.3rem; }
   height: auto;
   border: 1px solid #000;
   border-radius: 0;
+}
+
+/* === SPECIAL TITLES: About & Mission === */
+#about h2,
+#mission h2 {
+  background-color: #555;   /* gris */
+  color: #fff;              /* letras blancas */
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 4px;
+  border: 2px solid #000;   /* borde negro */
+  margin-bottom: 0.5rem;
+}
+#about h2::after,
+#mission h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #0a66c2; /* azul */
+  margin-top: 0.4rem;
+  width: 100%;
 }
 
 /* ========= FOOTER ========= */
@@ -181,7 +183,7 @@ li { margin-bottom: 0.3rem; }
 @media (max-width: 700px) {
   .header-content {
     flex-direction: column;
-    align-items: flex-start;  /* nombre/contacto arriba; menú baja */
+    align-items: flex-start;
   }
   .primary-nav { width: 100%; }
   .primary-nav ul {
