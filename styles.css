@@ -154,11 +154,15 @@ li { margin-bottom: 0.3rem; }
   margin-bottom: 0.5rem;
 }
 
-/* Línea azul separadora debajo del título */
-#about .about-text,
-#mission .about-text {
-  border-top: 3px solid #0a66c2; /* línea azul */
-  padding-top: 1rem;             /* espacio entre línea y texto */
+/* Línea azul debajo del título, en el área blanca */
+#about h2::after,
+#mission h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #0a66c2; /* azul corporativo */
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 /* ========= FOOTER ========= */
