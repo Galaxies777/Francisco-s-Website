@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* ========= RESET ========= */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
 
@@ -16,16 +15,13 @@
       background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
       color: #1a1a1a;
       padding: 0 1rem;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
-    /* ========= HEADER ========= */
+    /* Header */
     .site-header {
-      border: 3px solid #000000;
+      border: 3px solid #000;
       border-radius: 10px;
-      background: #ffffff;
+      background: #fff;
       padding: 1rem 1.5rem;
       margin: 1rem 0 2rem;
       box-shadow: 0 6px 14px rgba(0,0,0,0.12);
@@ -33,10 +29,9 @@
 
     .header-content {
       display: flex;
-      justify-content: space-between; /* izquierda (identidad) | derecha (menú) */
+      justify-content: space-between;
       align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap; /* permite que baje en pantallas chicas */
+      flex-wrap: wrap;
     }
 
     .identity-text {
@@ -47,15 +42,12 @@
     }
 
     .site-title {
-      display: inline-block;
       background-color: #333;
       color: #fff;
       padding: 0.5rem 1rem;
       border: 2px solid #000;
-      border-radius: 0;
       font-weight: 700;
-      margin: 0;                 /* pegado a la esquina */
-      align-self: flex-start;
+      margin: 0;
     }
 
     .contact {
@@ -64,76 +56,62 @@
       gap: 1rem;
       padding: 0.5rem 1rem;
       font-weight: 700;
-      background-color: #36AEBF;  /* Medium Azure */
+      background-color: #36AEBF;
       border: 2px solid #000;
-      border-radius: 0;
-      margin: 0;                 /* pegado a la izquierda */
-      align-self: flex-start;
+      margin: 0;
     }
-    .contact li { margin: 0; padding: 0; }
+
     .contact a {
       color: #fff;
       text-decoration: none;
-      padding: 0.25rem 0;
-      display: inline-block;
-      transition: color .2s;
     }
+
     .contact a:hover { color: #000; }
 
     .primary-nav {
       background-color: #333;
       border: 2px solid #000;
-      border-radius: 0;
     }
+
     .primary-nav ul {
       list-style: none;
       display: flex;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
+
     .primary-nav a {
       color: #fff;
       font-weight: bold;
       text-decoration: none;
       padding: 0.5rem 1rem;
       display: block;
-      transition: background 0.2s, color 0.2s;
     }
+
     .primary-nav a:hover {
       background-color: #0a66c2;
-      color: #fff;
     }
 
-    /* ========= GRID PRINCIPAL (dos columnas) ========= */
-    .main-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;   /* izquierda 1 parte, derecha 2 partes */
-      gap: 2rem;
-      max-width: 1200px;
+    /* Contenido */
+    main {
+      max-width: 900px;
       margin: 0 auto;
-      padding-bottom: 2rem;
-      width: 100%;
+      padding: 1rem 0;
     }
 
-    /* Secciones con tu estilo de tarjetas */
     section {
-      background: #ffffff;
-      border: 3px solid #000000;
-      border-radius: 8px;
+      margin-bottom: 2rem;
       padding: 1rem;
+      background: #fff;
+      border: 3px solid #000;
+      border-radius: 8px;
     }
+
     h2 {
       margin-bottom: 1rem;
       color: #0a66c2;
       border-bottom: 2px solid #e0e6ed;
       padding-bottom: 0.3rem;
-    }
-
-    /* Columna izquierda: apila about/mission */
-    .left-column {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
     }
 
     .about-container {
@@ -142,61 +120,41 @@
       align-items: flex-start;
       gap: 2rem;
     }
+
     .about-photo img {
       max-width: 500px;
       height: auto;
       border: 1px solid #000;
-      border-radius: 0;
     }
 
-    /* Columna derecha: bloque largo (placeholder) */
-    .right-column section {
-      min-height: 100%;
-    }
-
-    /* ========= RESPONSIVE ========= */
-    @media (max-width: 900px) {
-      .site-title { font-size: 1.1rem; }
-    }
-
-    @media (max-width: 1000px) {
-      .about-container { flex-direction: column; }
-      .about-container { text-align: left; }
+    /* Responsive */
+    @media (max-width: 800px) {
+      .about-container { flex-direction: column; text-align: center; }
       .about-photo { align-self: center; }
     }
 
-    @media (max-width: 800px) {
-      .main-grid {
-        grid-template-columns: 1fr;   /* una columna en móvil */
-      }
-    }
-
     @media (max-width: 700px) {
-      .header-content {
-        flex-direction: column;
-        align-items: flex-start;  /* nombre/contacto arriba; menú baja */
-      }
+      .header-content { flex-direction: column; align-items: flex-start; }
       .primary-nav { width: 100%; }
       .primary-nav ul { flex-direction: column; width: 100%; }
-      .primary-nav a { width: 100%; text-align: center; }
+      .primary-nav a { text-align: center; }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="header-content">
       <div class="identity-text">
         <h1 class="site-title">Francisco Santiago Merced</h1>
-        <ul class="contact" role="list">
+        <ul class="contact">
           <li>Email: <a href="mailto:fr506021@ucf.edu">fr506021@ucf.edu</a></li>
           <li><a href="https://www.linkedin.com/in/francisco-santiago-a5035621b" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
 
-      <nav aria-label="Primary" class="primary-nav">
-        <ul role="list">
-          <li><a href="index.html" aria-current="page">About Me</a></li>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="index.html">About Me</a></li>
           <li><a href="index.html#mission">My Mission</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="project-1.html">Project 1</a></li>
@@ -206,57 +164,38 @@
     </div>
   </header>
 
-  <!-- GRID de dos columnas -->
-  <main class="main-grid" id="main">
-    <!-- Columna IZQUIERDA: About + Mission (tu contenido actual) -->
-    <div class="left-column">
-      <section id="about">
-        <div class="about-container">
-          <div class="about-text">
-            <h2>About Me</h2>
-            <p>
-              I am an Information Technology student at the University of Central Florida with a strong foundation in hardware and software support. My hands-on experience includes assembling and configuring computer systems, diagnosing and troubleshooting technical issues, and providing support for mobile devices and desktops. I bring problem-solving ability,
-              adaptability, and a client-focused approach that ensures technology works as a strategic asset for the organization. With both technical expertise and strong communication skills, I am well-prepared to add value from day one.
-            </p>
-          </div>
-          <div class="about-photo">
-            <img src="images/profile.jpeg" 
-                 alt="Professional photo of Francisco Santiago" 
-                 width="500" height="500">
-          </div>
+  <main>
+    <section id="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            I am an Information Technology student at the University of Central Florida with a strong foundation in hardware and software support. My hands-on experience includes assembling and configuring computer systems, diagnosing and troubleshooting technical issues, and providing support for mobile devices and desktops. I bring problem-solving ability,
+            adaptability, and a client-focused approach that ensures technology works as a strategic asset for the organization. With both technical expertise and strong communication skills, I am well-prepared to add value from day one.
+          </p>
         </div>
-      </section>
-
-      <section id="mission">
-        <div class="about-container">
-          <div class="about-photo">
-            <img src="images/computer.jpeg" 
-                 alt="Symbolic image representing my mission" 
-                 width="200" height="200">
-          </div>
-          <div class="about-text">
-            <h2>My Mission</h2>
-            <p>
-              My mission is to apply my technical expertise and problem-solving skills to create efficient, 
-              reliable IT solutions that empower people and organizations to reach their goals. I strive to 
-              bridge the gap between technology and users, ensuring systems are not only functional but also 
-              intuitive, accessible, and impactful.
-            </p>
-          </div>
+        <div class="about-photo">
+          <img src="images/profile.jpeg" alt="Professional photo of Francisco Santiago" width="500" height="500">
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <!-- Columna DERECHA: bloque largo (placeholder; mete tu contenido real aquí) -->
-    <div class="right-column">
-      <section id="resume">
-        <h2>Resume / Projects</h2>
-        <p>
-          Place your resume, projects, or any long-form content here. This panel está pensado para ser más largo
-          y acompañar a la columna izquierda. Puedes dividirlo en subsecciones, listas o tarjetas según prefieras.
-        </p>
-      </section>
-    </div>
+    <section id="mission">
+      <div class="about-container">
+        <div class="about-photo">
+          <img src="images/computer.jpeg" alt="Symbolic image representing my mission" width="200" height="200">
+        </div>
+        <div class="about-text">
+          <h2>My Mission</h2>
+          <p>
+            My mission is to apply my technical expertise and problem-solving skills to create efficient, 
+            reliable IT solutions that empower people and organizations to reach their goals. I strive to 
+            bridge the gap between technology and users, ensuring systems are not only functional but also 
+            intuitive, accessible, and impactful.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
