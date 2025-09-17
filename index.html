@@ -15,6 +15,9 @@
       background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
       color: #1a1a1a;
       padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     /* Header */
@@ -97,6 +100,7 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 1rem 0;
+      flex: 1; /* pushes footer to bottom if little content */
     }
 
     section {
@@ -125,6 +129,18 @@
       max-width: 500px;
       height: auto;
       border: 1px solid #000;
+    }
+
+    /* Footer */
+    .site-footer {
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      font-weight: bold;
+      border-top: 2px solid #000;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
     }
 
     /* Responsive */
@@ -197,5 +213,9 @@
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Francisco Santiago Merced · All Rights Reserved</p>
+  </footer>
 </body>
 </html>
