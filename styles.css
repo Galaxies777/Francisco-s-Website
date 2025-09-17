@@ -1,35 +1,54 @@
+/* ========= RESET ========= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html, body { height: 100%; }
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
   color: #1a1a1a;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* ===== Imagen de perfil ===== */
+/* ========= PERFIL ========= */
 .profile-pic {
   width: 120px;
   height: auto;
   border-radius: 50%;
 }
 
-/* Header */
+/* ========= HEADER ========= */
 .site-header {
   border: 3px solid #000000;
   border-radius: 10px;
   background: #ffffff;
   padding: 1rem 1.5rem;
-  margin-bottom: 2rem;
+  margin: 1rem 0 2rem;
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
+/* Contenedor principal del header:
+   IZQUIERDA (nombre + contacto)  |  DERECHA (menú) */
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 1rem;
+  flex-wrap: wrap; /* permite que baje en pantallas chicas */
 }
+
+/* Bloque izquierdo */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* Título / Nombre */
 .site-title {
   display: inline-block;
   background-color: #333;
@@ -37,19 +56,19 @@ body {
   padding: 0.5rem 1rem;
   border: 2px solid #000;
   border-radius: 0;
+  font-weight: 700;
 }
 
-/* Contact bar (fila con fondo, sin convertirlo en un bloque único) */
+/* Barra de contacto (email + LinkedIn) */
 .contact {
   list-style: none;
-  margin-top: 0.5rem;
-  display: flex;              /* mantiene los items en fila */
-  gap: 1rem;                  /* espacio entre email / LinkedIn / phone */
-  padding: 0.5rem 1rem;       /* aire dentro de la barra */
-  font-weight: 700;           /* texto en bold */
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
   background-color: #36AEBF;  /* Medium Azure */
-  border: 2px solid #000;     /* borde negro */
-  border-radius: 0;           /* esquinas cuadradas */
+  border: 2px solid #000;
+  border-radius: 0;
 }
 .contact li { margin: 0; padding: 0; }
 .contact a {
@@ -61,18 +80,17 @@ body {
 }
 .contact a:hover { color: #000; }
 
-/* Menú unido como barra */
+/* ========= MENÚ DERECHO ========= */
+.primary-nav {
+  background-color: #333;
+  border: 2px solid #000;
+  border-radius: 0;
+}
 .primary-nav ul {
   list-style: none;
   display: flex;
   padding: 0;
   margin: 0;
-}
-.primary-nav {
-  display: inline-block;
-  background-color: #333;
-  border: 2px solid #000;
-  border-radius: 0;
 }
 .primary-nav a {
   color: #fff;
@@ -87,11 +105,12 @@ body {
   color: #fff;
 }
 
-/* Secciones principales */
+/* ========= CONTENIDO ========= */
 main {
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem 0;
+  flex: 1; /* empuja el footer al fondo */
 }
 section {
   margin-bottom: 2rem;
@@ -109,32 +128,10 @@ h2 {
 h3 { margin-bottom: 0.5rem; color: #333; }
 h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
 
-/* Listas (contenido) */
 ul { margin-left: 1.5rem; margin-top: 0.5rem; }
 li { margin-bottom: 0.3rem; }
 
-/* Layout para empujar el footer al fondo */
-html, body { height: 100%; margin: 0; }
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-main { flex: 1; }
-
-/* Footer (global) */
-.site-footer {
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  font-weight: bold;
-  border-top: 2px solid #000;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 3rem;
-}
-
-/* === ABOUT SECTION === */
+/* ========= ABOUT ========= */
 .about-container {
   display: flex;
   justify-content: space-between;
@@ -150,35 +147,43 @@ main { flex: 1; }
   border-radius: 0;
 }
 
-/* Footer cuando está dentro de About */
-#about .site-footer {
-  margin-top: 2rem;
-  border-radius: 6px;
+/* ========= FOOTER ========= */
+.site-footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  border-top: 2px solid #000;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
 }
 
-/* Responsive ajustes */
-@media (max-width: 600px) {
+/* ========= RESPONSIVE ========= */
+@media (max-width: 900px) {
+  .site-title { font-size: 1.1rem; }
+}
+
+@media (max-width: 700px) {
+  /* El menú baja y se hace vertical */
   .header-content {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
   }
+  .primary-nav { width: 100%; }
+  .primary-nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .primary-nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* About en columna */
   .about-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-}
-
-/* === ALINEACIÓN NOMBRE, MENÚ Y CONTACTO === */
-.header-content {
-  flex-direction: column;    /* stack items vertically */
-  align-items: flex-start;   /* align all to the left edge */
-  gap: 0.5rem;
-}
-.site-title,
-.primary-nav,
-.contact {
-  align-self: flex-start;
-  margin-left: 0;
 }
