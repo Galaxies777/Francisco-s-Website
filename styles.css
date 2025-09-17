@@ -25,10 +25,10 @@ body {
 
 .header-content {
   display: flex;
-  justify-content: space-between; /* izquierda (identidad) | derecha (menú) */
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap; /* permite que baje en pantallas chicas */
+  flex-wrap: wrap;
 }
 
 /* Bloque izquierdo (nombre + contactos) */
@@ -63,7 +63,7 @@ body {
   border: 2px solid #000;
   border-radius: 0;
   margin: 0;
-  align-self: flex-start; /* arranca desde la esquina */
+  align-self: flex-start;
 }
 .contact li { margin: 0; padding: 0; }
 .contact a {
@@ -105,7 +105,7 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem 0;
-  flex: 1; /* empuja el footer al fondo */
+  flex: 1;
 }
 section {
   margin-bottom: 2rem;
@@ -142,25 +142,6 @@ li { margin-bottom: 0.3rem; }
   border-radius: 0;
 }
 
-/* === SPECIAL TITLES: About & Mission === */
-#about h2,
-#mission h2 {
-  background-color: #555;   /* gris */
-  color: #fff;              /* letras blancas */
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  border-radius: 4px;
-  border: 2px solid #000;   /* borde negro */
-  margin-bottom: 0;         /* sin espacio debajo */
-}
-
-/* línea azul fuera del rectángulo, en la tarjeta */
-#about,
-#mission {
-  border-top: 6px solid #0a66c2; /* línea azul arriba de la sección */
-  padding-top: 1rem;             /* espacio después de la línea */
-}
-
 /* ========= FOOTER ========= */
 .site-footer {
   width: 100%;
@@ -181,7 +162,7 @@ li { margin-bottom: 0.3rem; }
 @media (max-width: 700px) {
   .header-content {
     flex-direction: column;
-    align-items: flex-start;  /* nombre/contacto arriba; menú baja */
+    align-items: flex-start;
   }
   .primary-nav { width: 100%; }
   .primary-nav ul {
