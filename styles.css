@@ -145,15 +145,20 @@ li { margin-bottom: 0.3rem; }
 /* === SPECIAL TITLES: About & Mission === */
 #about h2,
 #mission h2 {
-  background-color: #555;   /* gris */
+  background-color: #555;   /* rectángulo gris */
   color: #fff;              /* letras blancas */
   padding: 0.5rem 1rem;
   display: inline-block;
-  border-radius: 4px;
   border: 2px solid #000;   /* borde negro */
+  border-radius: 4px;
   margin-bottom: 0.5rem;
-  border-bottom: 3px solid #0a66c2; /* línea azul separadora en la tarjeta */
-  padding-bottom: 0.3rem;
+}
+
+/* Línea azul separadora debajo del título */
+#about .about-text,
+#mission .about-text {
+  border-top: 3px solid #0a66c2; /* línea azul */
+  padding-top: 1rem;             /* espacio entre línea y texto */
 }
 
 /* ========= FOOTER ========= */
