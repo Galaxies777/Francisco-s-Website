@@ -1,16 +1,21 @@
 /* ========= RESET ========= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body { height: 100%; }
+/* Put gradient on html so it spans whole page */
+html {
+  min-height: 100%;
+  background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
+}
+
 body {
+  min-height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
+  background: transparent;   /* let html gradient show through */
   color: #1a1a1a;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 /* ========= HEADER ========= */
@@ -180,12 +185,3 @@ li { margin-bottom: 0.3rem; }
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
-
