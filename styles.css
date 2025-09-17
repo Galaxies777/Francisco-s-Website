@@ -13,13 +13,6 @@ body {
   min-height: 100vh;
 }
 
-/* ========= PERFIL ========= */
-.profile-pic {
-  width: 120px;
-  height: auto;
-  border-radius: 50%;
-}
-
 /* ========= HEADER ========= */
 .site-header {
   border: 3px solid #000000;
@@ -30,25 +23,23 @@ body {
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-/* Contenedor principal del header:
-   IZQUIERDA (nombre + contacto)  |  DERECHA (menú) */
 .header-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* izquierda (identidad) | derecha (menú) */
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap; /* permite que baje en pantallas chicas */
 }
 
-/* Bloque izquierdo */
-.header-left {
+/* Bloque izquierdo (nombre + contactos) */
+.identity-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 
-/* Título / Nombre */
+/* Nombre */
 .site-title {
   display: inline-block;
   background-color: #333;
@@ -110,7 +101,7 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem 0;
-  flex: 1; /* empuja el footer al fondo */
+  flex: 1; /* empuja el footer al fondo si lo agregas */
 }
 section {
   margin-bottom: 2rem;
@@ -147,28 +138,15 @@ li { margin-bottom: 0.3rem; }
   border-radius: 0;
 }
 
-/* ========= FOOTER ========= */
-.site-footer {
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  font-weight: bold;
-  border-top: 2px solid #000;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 3rem;
-}
-
 /* ========= RESPONSIVE ========= */
 @media (max-width: 900px) {
   .site-title { font-size: 1.1rem; }
 }
 
 @media (max-width: 700px) {
-  /* El menú baja y se hace vertical */
   .header-content {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start;  /* nombre/contacto arriba; menú baja */
   }
   .primary-nav { width: 100%; }
   .primary-nav ul {
@@ -180,10 +158,11 @@ li { margin-bottom: 0.3rem; }
     text-align: center;
   }
 
-  /* About en columna */
   .about-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 }
+
+
