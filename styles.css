@@ -1,17 +1,17 @@
-/* ========= RESET ========= */
+/* ========= RESET + GRADIENT FIX ========= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Put gradient on html so it spans whole page */
+/* Put the gradient on both roots and pin it */
+html, body { min-height: 100%; }
 html {
-  min-height: 100%;
-  background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
+  background: linear-gradient(to bottom, #36AEBF 0%, #E0FFFF 100%);
+  background-attachment: fixed;    /* keep it continuous on long pages */
+  background-repeat: no-repeat;
 }
-
 body {
-  min-height: 100%;
+  background: transparent !important;  /* let the html gradient show through */
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background: transparent;   /* let html gradient show through */
   color: #1a1a1a;
   padding: 0 1rem;
   display: flex;
@@ -185,3 +185,4 @@ li { margin-bottom: 0.3rem; }
     text-align: center;
   }
 }
+
