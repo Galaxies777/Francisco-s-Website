@@ -52,7 +52,6 @@ body {
   align-self: flex-start;
 }
 
-
 /* Barra de contacto */
 .contact {
   list-style: none;
@@ -63,10 +62,9 @@ body {
   background-color: #36AEBF;
   border: 2px solid #000;
   border-radius: 0;
-  margin: 0;           /* <-- quita margen */
+  margin: 0;
   align-self: flex-start; /* arranca desde la esquina */
 }
-
 .contact li { margin: 0; padding: 0; }
 .contact a {
   color: #fff;
@@ -107,7 +105,7 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem 0;
-  flex: 1; /* empuja el footer al fondo si lo agregas */
+  flex: 1; /* empuja el footer al fondo */
 }
 section {
   margin-bottom: 2rem;
@@ -144,6 +142,18 @@ li { margin-bottom: 0.3rem; }
   border-radius: 0;
 }
 
+/* ========= FOOTER ========= */
+.site-footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  border-top: 2px solid #000;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
 /* ========= RESPONSIVE ========= */
 @media (max-width: 900px) {
   .site-title { font-size: 1.1rem; }
@@ -170,6 +180,8 @@ li { margin-bottom: 0.3rem; }
     text-align: center;
   }
 }
+
+
 
 
 
