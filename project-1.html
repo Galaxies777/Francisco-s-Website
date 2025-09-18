@@ -9,11 +9,21 @@
     h2 {
       background-color: #333;   /* gris oscuro */
       color: #fff;              /* letras blancas */
-      padding: 0.5rem 1rem;     /* espacio interno */
-      border: 2px solid #000;   /* borde negro */
-      border-radius: 4px;       /* esquinas suaves */
-      display: inline-block;    /* fondo ajustado al texto */
-      margin-bottom: 1rem;      /* espacio debajo */
+      padding: 0.5rem 1rem;
+      border: 2px solid #000;   /* borde negro alrededor */
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.5rem;    /* espacio antes de la línea */
+    }
+
+    /* ===== Línea azul debajo del título ===== */
+    h2::after {
+      content: "";
+      display: block;
+      height: 3px;              /* grosor de la línea */
+      background-color: #0a66c2;/* azul corporativo */
+      margin-top: 0.4rem;       /* separación del título */
+      width: 100%;              /* se extiende todo el ancho de la tarjeta */
     }
   </style>
 </head>
