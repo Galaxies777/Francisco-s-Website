@@ -2,49 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Project 2 — Networking Lab Setup</title>
+  <title>Francisco Santiago — Resume</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Francisco Santiago — Resume</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" role="banner">
     <div class="header-content">
-      <h1 class="site-title">Francisco Santiago — Project 2</h1>
-      <nav class="primary-nav">
-        <ul>
+      <div class="identity-text">
+        <h1 class="site-title">Francisco Santiago Merced</h1>
+        <ul class="contact" role="list">
+          <li>Email: <a href="mailto:fr506021@ucf.edu">fr506021@ucf.edu</a></li>
+          <li><a href="https://www.linkedin.com/in/francisco-santiago-a5035621b" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="tel:+14077478712">407-747-8712</a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Primary" class="primary-nav">
+        <ul role="list">
           <li><a href="index.html">About Me</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li><a href="index.html#mission">My Mission</a></li>
+          <li><a href="resume.html" aria-current="page">Resume</a></li>
           <li><a href="project-1.html">Project 1</a></li>
-          <li><a href="project-2.html" aria-current="page">Project 2</a></li>
+          <li><a href="project-2.html">Project 2</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Main content -->
   <main>
-    <section class="project-panel">
-      <div class="project-container">
-        <figure class="project-photo">
-          <img src="images/projects/network-lab.jpg" alt="Networking lab setup project">
-        </figure>
-        <div class="project-info">
-          <h2>Networking Lab Setup</h2>
+    <!-- Project 1 -->
+    <section id="project1">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Project 1</h2>
           <p>
-            Designed and configured a small networking lab for academic and hands-on training. 
-            The project involved setting up routers, switches, and end devices with correct 
-            addressing schemes and security configurations.
+            Write a short intro here… what’s this project about? 
+            Add details like goals, technologies, and what you learned.
           </p>
+
+          <h3>🔹 Tools & Technologies</h3>
           <ul>
-            <li>Configured VLANs and subnets</li>
-            <li>Set up DHCP, DNS, and firewall rules</li>
-            <li>Troubleshooting connectivity with Cisco Packet Tracer</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
           </ul>
+
+          <h3>🔹 Links</h3>
+          <p>
+            Demo: <a href="#" target="_blank">Add Live Link</a><br>
+            GitHub: <a href="#" target="_blank">Add Repository</a>
+          </p>
+        </div>
+
+        <div class="about-photo">
+          <img src="images/project1.png" 
+               alt="Screenshot of Project 1" 
+               width="400" height="250">
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <p>© 2025 Francisco Santiago — All Rights Reserved</p>
+    <p>© 2025 Francisco Santiago Merced · All Rights Reserved</p>
   </footer>
 </body>
 </html>
