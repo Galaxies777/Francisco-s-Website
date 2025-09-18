@@ -130,6 +130,16 @@ h2 {
   border: 2px solid #000;   /* borde negro */
 }
 
+/* Línea azul debajo de cada título */
+h2 + *::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #0a66c2;
+  margin: 0.6rem 0 1rem;
+  width: 100%;
+}
+
 h3 { margin-bottom: 0.5rem; color: #333; }
 h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
 
@@ -162,6 +172,23 @@ li { margin-bottom: 0.3rem; }
   border: 2px solid #000;
   border-radius: 4px;
   margin-bottom: 1rem;
+}
+
+/* Blue line BELOW the grey title, inside white card */
+#about .about-text,
+#mission .about-text {
+  border-top: 3px solid #0a66c2;
+  padding-top: 1rem;
+}
+
+/* === Blue divider outside the grey title box (general use) === */
+.about-text h2 + *::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #0a66c2;
+  margin: 0.6rem 0 1rem;
+  width: 100%;
 }
 
 /* ========= FOOTER ========= */
