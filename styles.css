@@ -1,11 +1,15 @@
 /* ========= RESET ========= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body { height: 100%; }
+html {
+  height: 100%;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
+  background-attachment: fixed;  /* el gradient acompaña hasta el footer */
   color: #1a1a1a;
   padding: 0 1rem;
   display: flex;
@@ -151,14 +155,24 @@ li { margin-bottom: 0.3rem; }
   display: inline-block;
   border: 2px solid #000;   /* black border */
   border-radius: 4px;
-  margin-bottom: 1rem;      /* spacing before blue line */
+  margin-bottom: 1rem;
 }
 
 /* Blue line BELOW the grey title, inside white card */
 #about .about-text,
 #mission .about-text {
-  border-top: 3px solid #0a66c2; /* blue line */
-  padding-top: 1rem;             /* spacing before text */
+  border-top: 3px solid #0a66c2;
+  padding-top: 1rem;
+}
+
+/* === Blue divider outside the grey title box (general use) === */
+.about-text h2 + *::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #0a66c2;
+  margin: 0.6rem 0 1rem;
+  width: 100%;
 }
 
 /* ========= FOOTER ========= */
