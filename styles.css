@@ -106,7 +106,7 @@ body {
 
 /* ========= CONTENIDO ========= */
 main {
-  max-width: 900px;
+  max-width: 1200px;   /* ↑ antes 900px */
   margin: 0 auto;
   padding: 1rem 0;
   flex: 1;
@@ -146,17 +146,23 @@ h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
 ul { margin-left: 1.5rem; margin-top: 0.5rem; }
 li { margin-bottom: 0.3rem; }
 
-/* ========= ABOUT ========= */
+/* ========= ABOUT / TARJETAS CON FOTO ========= */
 .about-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
 }
+.about-text {              /* ← nuevo: proporción del texto */
+  flex: 1 1 58%;
+}
+.about-photo {             /* ← nuevo: proporción de la foto */
+  flex: 1 1 42%;
+}
 .about-photo { margin: 0; }
 .about-text h2 { margin-top: 0; }
 .about-photo img {
-  max-width: 500px;
+  width: 100%;             /* ← antes max-width:500px */
   height: auto;
   border: 1px solid #000;
   border-radius: 0;
