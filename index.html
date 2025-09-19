@@ -100,7 +100,7 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 1rem 0;
-      flex: 1; /* pushes footer to bottom if little content */
+      flex: 1;
     }
 
     section {
@@ -111,23 +111,22 @@
       border-radius: 8px;
     }
 
-    /* Titles */
+    /* Titles con caja gris + línea azul debajo */
     h2 {
-      background-color: #333;   /* dark gray box */
-      color: #fff;              /* white text */
+      background-color: #333;   /* gris oscuro */
+      color: #fff;              /* letras blancas */
       padding: 0.5rem 1rem;
       border-radius: 4px;
       display: inline-block;
-      margin-bottom: 0.5rem;
       border: 2px solid #000;
+      margin-bottom: 0.5rem;
     }
 
-    /* Blue divider line BELOW the gray box */
     h2::after {
       content: "";
       display: block;
       height: 3px;
-      background-color: #0a66c2;
+      background-color: #0a66c2; /* línea azul */
       margin-top: 0.5rem;
       width: 100%;
     }
@@ -225,6 +224,15 @@
             bridge the gap between technology and users, ensuring systems are not only functional but also 
             intuitive, accessible, and impactful.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="project1">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Gaming | Performance Computer</h2>
+          <p>Specs: Ryzen 5 5600x, 32 GB RAM, AMD 6600XT Graphics, KRAKEN water cooling unit</p>
         </div>
       </div>
     </section>
