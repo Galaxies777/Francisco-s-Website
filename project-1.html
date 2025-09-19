@@ -8,15 +8,13 @@
     /* ========= RESET ========= */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      height: 100%;
-    }
+    html { height: 100%; }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
       background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
-      background-attachment: fixed;  /* el gradient acompaña hasta el footer */
+      background-attachment: fixed;
       color: #1a1a1a;
       padding: 0 1rem;
       display: flex;
@@ -95,7 +93,7 @@
 
     /* ========= CONTENIDO ========= */
     main {
-      max-width: 1200px;   /* expandido para que quepan texto+foto lado a lado */
+      max-width: 1200px;
       margin: 0 auto;
       padding: 1rem 0;
       flex: 1;
@@ -119,7 +117,6 @@
       border: 2px solid #000;
     }
 
-    /* Línea azul debajo de cada título */
     h2 + *::before {
       content: "";
       display: block;
@@ -146,34 +143,14 @@
     .about-photo {
       flex: 1 1 42%;
       display: flex;
-      justify-content: center;   /* centra horizontal dentro de su columna */
-      align-items: center;       /* centra vertical dentro de su columna */
+      justify-content: center;   /* centra horizontal */
+      align-items: center;       /* centra vertical */
     }
     .about-photo img {
       max-width: 100%;
       height: auto;
-      border: 2px solid #000;    /* borde negro 2px en TODAS las fotos */
-      display: block;
-    }
-
-    /* === SPECIAL TITLES: About & Mission (si los usas en otras páginas) === */
-    #about h2,
-    #mission h2 {
-      background-color: #333;
-      color: #fff;
-      padding: 0.5rem 1rem;
       border: 2px solid #000;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-    }
-    #about h2::after,
-    #mission h2::after {
-      content: "";
       display: block;
-      height: 3px;
-      background-color: #0a66c2;
-      margin-top: 0.6rem;
-      width: 100%;
     }
 
     /* ========= FOOTER ========= */
@@ -190,19 +167,11 @@
 
     /* ========= RESPONSIVE ========= */
     @media (max-width: 700px) {
-      .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .header-content { flex-direction: column; align-items: flex-start; }
       .primary-nav { width: 100%; }
       .primary-nav ul { flex-direction: column; width: 100%; }
       .primary-nav a { text-align: center; }
-
-      .about-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
+      .about-container { flex-direction: column; align-items: center; text-align: center; }
     }
   </style>
 </head>
@@ -238,24 +207,7 @@
       <div class="about-container">
         <div class="about-text">
           <h2>Gaming | Performance Computer</h2>
-          <p>
-            This computer was built in 2020 for a customer looking for powerful
-            and affordable options to play computer games while maximizing hardware
-            and software capabilities.
-          </p>
-          <h3>🔹 Tools & Skills</h3>
-          <ul>
-            <li>Windows installer</li>
-            <li>Hardware and Design Skills</li>
-            <li>Budget Management & Prioritization</li>
-          </ul>
-          <h3>Additional Information</h3>
-          <ul>
-            <li>Specs: Ryzen 5 5600x, 32 GB RAM, AMD 6600XT Graphics, KRAKEN water cooling unit</li>
-            <li>Project Timeframe: 4 weeks</li>
-            <li>Professional wiring & optimization</li>
-            <li>Build Style: Gaming Open Case Style | Modular Construction</li>
-          </ul>
+          <p>This computer was built in 2020...</p>
         </div>
         <div class="about-photo">
           <img src="images/franspc.jpeg" alt="Gaming Performance Computer">
@@ -268,25 +220,7 @@
       <div class="about-container">
         <div class="about-text">
           <h2>Virtual Reality | Research Computer</h2>
-          <p>
-            This system was built in 2021 for a client who needed a 
-            reliable and efficient computer to experiment with new
-            virtual reality technology, as well as 3D modeling and
-            programming software.
-          </p>
-          <h3>🔹 Tools & Skills</h3>
-          <ul>
-            <li>Operating System & Software Installation</li>
-            <li>Virtual Reality Hardware Configuration</li>
-            <li>Cable Management & Thermal Design</li>
-          </ul>
-          <h3>Additional Information</h3>
-          <ul>
-            <li>Specs: Ryzen 7 9700, RTX 3060 TI, 32 GB RAM, Fan Cooling System</li>
-            <li>Project Timeframe: 2 months 2 weeks</li>
-            <li>Professional Wiring and Optimization</li>
-            <li>Build Style: Home Office | Modular Construction</li>
-          </ul>
+          <p>This system was built in 2021...</p>
         </div>
         <div class="about-photo">
           <img src="images/Joelsps.jpeg" alt="Virtual Reality Research Computer">
@@ -299,24 +233,7 @@
       <div class="about-container">
         <div class="about-text">
           <h2>Streaming | Multimedia Computer</h2>
-          <p>
-            Designed in 2023 for a content creator who required strong performance 
-            for video editing, graphic design, and streaming. Focus was placed on 
-            GPU power and high-speed storage.
-          </p>
-          <h3>🔹 Tools & Skills</h3>
-          <ul>
-            <li>Adobe Suite Optimization</li>
-            <li>High-speed SSD and RAID setup</li>
-            <li>Performance Tuning & Stress Testing</li>
-          </ul>
-          <h3>Additional Information</h3>
-          <ul>
-            <li>Specs: Intel i7 12700K, 32 GB RAM, NVIDIA RTX 3080, Dual NVMe 2TB SSDs</li>
-            <li>Project Timeframe: 3 weeks</li>
-            <li>Noise Reduction, AIO Water Cooling</li>
-            <li>Build Style: Professional Tower | Silent fan configuration</li>
-          </ul>
+          <p>Designed in 2023 for a content creator...</p>
         </div>
         <div class="about-photo">
           <img src="images/mikeysps.jpeg" alt="Streaming Multimedia Computer">
