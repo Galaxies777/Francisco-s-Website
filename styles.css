@@ -153,26 +153,24 @@ li { margin-bottom: 0.3rem; }
   align-items: flex-start;
   gap: 2rem;
 }
-.about-text {              /* ← nuevo: proporción del texto */
-  flex: 1 1 58%;
-}
-.about-photo {             /* ← nuevo: proporción de la foto */
-  flex: 1 1 42%;
-}
+.about-text { flex: 1 1 58%; }
+.about-photo { flex: 1 1 42%; }
 .about-photo { margin: 0; }
 .about-text h2 { margin-top: 0; }
+
+/* Solo las fotos: borde negro de 2px */
 .about-photo img {
-  width: 100%;             /* ← antes max-width:500px */
+  width: 100%;
   height: auto;
-  border: 1px solid #000;
+  border: 2px solid #000;  /* borde negro de 2px */
   border-radius: 0;
 }
 
 /* === SPECIAL TITLES: About & Mission === */
 #about h2,
 #mission h2 {
-  background-color: #333;   /* gris oscuro */
-  color: #fff;              /* blanco */
+  background-color: #333;
+  color: #fff;
   padding: 0.5rem 1rem;
   display: inline-block;
   border: 2px solid #000;
