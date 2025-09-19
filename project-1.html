@@ -16,7 +16,7 @@
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
       background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
-      background-attachment: fixed;
+      background-attachment: fixed;  /* el gradient acompaña hasta el footer */
       color: #1a1a1a;
       padding: 0 1rem;
       display: flex;
@@ -71,10 +71,7 @@
       margin: 0;
     }
 
-    .contact a {
-      color: #fff;
-      text-decoration: none;
-    }
+    .contact a { color: #fff; text-decoration: none; }
     .contact a:hover { color: #000; }
 
     .primary-nav {
@@ -94,13 +91,11 @@
       padding: 0.5rem 1rem;
       display: block;
     }
-    .primary-nav a:hover {
-      background-color: #0a66c2;
-    }
+    .primary-nav a:hover { background-color: #0a66c2; }
 
     /* ========= CONTENIDO ========= */
     main {
-      max-width: 1200px;
+      max-width: 1200px;   /* expandido para que quepan texto+foto lado a lado */
       margin: 0 auto;
       padding: 1rem 0;
       flex: 1;
@@ -113,6 +108,7 @@
       border-radius: 8px;
     }
 
+    /* ========= TITULOS ========= */
     h2 {
       background-color: #333;
       color: #fff;
@@ -139,30 +135,28 @@
     ul { margin-left: 1.5rem; margin-top: 0.5rem; }
     li { margin-bottom: 0.3rem; }
 
-    /* ========= ABOUT / TARJETAS ========= */
+    /* ========= TARJETAS CON FOTO ========= */
     .about-container {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 2rem;
     }
-    .about-text {
-      flex: 1 1 58%;
-    }
+    .about-text { flex: 1 1 58%; }
     .about-photo {
       flex: 1 1 42%;
       display: flex;
-      justify-content: center;  /* centra horizontal */
-      align-items: center;      /* centra vertical */
+      justify-content: center;   /* centra horizontal dentro de su columna */
+      align-items: center;       /* centra vertical dentro de su columna */
     }
     .about-photo img {
       max-width: 100%;
       height: auto;
-      border: 2px solid #000;  /* borde negro */
+      border: 2px solid #000;    /* borde negro 2px en TODAS las fotos */
       display: block;
     }
 
-    /* === SPECIAL TITLES: About & Mission === */
+    /* === SPECIAL TITLES: About & Mission (si los usas en otras páginas) === */
     #about h2,
     #mission h2 {
       background-color: #333;
@@ -264,7 +258,7 @@
           </ul>
         </div>
         <div class="about-photo">
-          <img src="images/project1.jpeg" alt="Gaming Performance Computer">
+          <img src="images/franspc.jpeg" alt="Gaming Performance Computer">
         </div>
       </div>
     </section>
@@ -295,7 +289,7 @@
           </ul>
         </div>
         <div class="about-photo">
-          <img src="images/project2.jpeg" alt="Virtual Reality Research Computer">
+          <img src="images/Joelsps.jpeg" alt="Virtual Reality Research Computer">
         </div>
       </div>
     </section>
@@ -325,7 +319,7 @@
           </ul>
         </div>
         <div class="about-photo">
-          <img src="images/project3.jpeg" alt="Streaming Multimedia Computer">
+          <img src="images/mikeysps.jpeg" alt="Streaming Multimedia Computer">
         </div>
       </div>
     </section>
