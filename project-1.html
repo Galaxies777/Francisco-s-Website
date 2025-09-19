@@ -50,11 +50,13 @@
     }
 
     .site-title {
+      display: block;
+      font-family: 'Monserrat', sans-serif;
+      font-weight: 700;
       background-color: #333;
       color: #fff;
       padding: 0.5rem 1rem;
       border: 2px solid #000;
-      font-weight: 700;
       margin: 0;
     }
 
@@ -73,21 +75,18 @@
       color: #fff;
       text-decoration: none;
     }
-
     .contact a:hover { color: #000; }
 
     .primary-nav {
       background-color: #333;
       border: 2px solid #000;
     }
-
     .primary-nav ul {
       list-style: none;
       display: flex;
       margin: 0;
       padding: 0;
     }
-
     .primary-nav a {
       color: #fff;
       font-weight: bold;
@@ -95,7 +94,6 @@
       padding: 0.5rem 1rem;
       display: block;
     }
-
     .primary-nav a:hover {
       background-color: #0a66c2;
     }
@@ -107,11 +105,10 @@
       padding: 1rem 0;
       flex: 1;
     }
-
     section {
       margin-bottom: 2rem;
       padding: 1rem;
-      background: #fff;
+      background: #ffffff;
       border: 3px solid #000000;
       border-radius: 8px;
     }
@@ -126,6 +123,7 @@
       border: 2px solid #000;
     }
 
+    /* Línea azul debajo de cada título */
     h2 + *::before {
       content: "";
       display: block;
@@ -141,20 +139,47 @@
     ul { margin-left: 1.5rem; margin-top: 0.5rem; }
     li { margin-bottom: 0.3rem; }
 
-    /* ========= TARJETAS CON FOTO ========= */
+    /* ========= ABOUT / TARJETAS ========= */
     .about-container {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 2rem;
     }
-    .about-text { flex: 1 1 50%; }   /* Texto ocupa 50% */
-    .about-photo { flex: 1 1 50%; }  /* Foto ocupa 50% */
+    .about-text {
+      flex: 1 1 58%;
+    }
+    .about-photo {
+      flex: 1 1 42%;
+      display: flex;
+      justify-content: center;  /* centra horizontal */
+      align-items: center;      /* centra vertical */
+    }
     .about-photo img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
-      border: 2px solid #000; /* borde negro de 2px */
-      border-radius: 0;
+      border: 2px solid #000;  /* borde negro */
+      display: block;
+    }
+
+    /* === SPECIAL TITLES: About & Mission === */
+    #about h2,
+    #mission h2 {
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: 2px solid #000;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    #about h2::after,
+    #mission h2::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: #0a66c2;
+      margin-top: 0.6rem;
+      width: 100%;
     }
 
     /* ========= FOOTER ========= */
@@ -170,24 +195,15 @@
     }
 
     /* ========= RESPONSIVE ========= */
-    @media (max-width: 900px) {
-      .site-title { font-size: 1.1rem; }
-    }
-
     @media (max-width: 700px) {
       .header-content {
         flex-direction: column;
         align-items: flex-start;
       }
       .primary-nav { width: 100%; }
-      .primary-nav ul {
-        flex-direction: column;
-        width: 100%;
-      }
-      .primary-nav a {
-        width: 100%;
-        text-align: center;
-      }
+      .primary-nav ul { flex-direction: column; width: 100%; }
+      .primary-nav a { text-align: center; }
+
       .about-container {
         flex-direction: column;
         align-items: center;
@@ -233,14 +249,12 @@
             and affordable options to play computer games while maximizing hardware
             and software capabilities.
           </p>
-
           <h3>🔹 Tools & Skills</h3>
           <ul>
             <li>Windows installer</li>
             <li>Hardware and Design Skills</li>
             <li>Budget Management & Prioritization</li>
           </ul>
-
           <h3>Additional Information</h3>
           <ul>
             <li>Specs: Ryzen 5 5600x, 32 GB RAM, AMD 6600XT Graphics, KRAKEN water cooling unit</li>
@@ -249,9 +263,8 @@
             <li>Build Style: Gaming Open Case Style | Modular Construction</li>
           </ul>
         </div>
-
         <div class="about-photo">
-          <img src="images/franspc.jpeg" alt="Gaming Performance PC">
+          <img src="images/project1.jpeg" alt="Gaming Performance Computer">
         </div>
       </div>
     </section>
@@ -267,14 +280,12 @@
             virtual reality technology, as well as 3D modeling and
             programming software.
           </p>
-
           <h3>🔹 Tools & Skills</h3>
           <ul>
             <li>Operating System & Software Installation</li>
             <li>Virtual Reality Hardware Configuration</li>
             <li>Cable Management & Thermal Design</li>
           </ul>
-
           <h3>Additional Information</h3>
           <ul>
             <li>Specs: Ryzen 7 9700, RTX 3060 TI, 32 GB RAM, Fan Cooling System</li>
@@ -283,9 +294,8 @@
             <li>Build Style: Home Office | Modular Construction</li>
           </ul>
         </div>
-
         <div class="about-photo">
-          <img src="images/Joelsps.jpeg" alt="Virtual Reality Research PC">
+          <img src="images/project2.jpeg" alt="Virtual Reality Research Computer">
         </div>
       </div>
     </section>
@@ -300,14 +310,12 @@
             for video editing, graphic design, and streaming. Focus was placed on 
             GPU power and high-speed storage.
           </p>
-
           <h3>🔹 Tools & Skills</h3>
           <ul>
             <li>Adobe Suite Optimization</li>
             <li>High-speed SSD and RAID setup</li>
             <li>Performance Tuning & Stress Testing</li>
           </ul>
-
           <h3>Additional Information</h3>
           <ul>
             <li>Specs: Intel i7 12700K, 32 GB RAM, NVIDIA RTX 3080, Dual NVMe 2TB SSDs</li>
@@ -316,9 +324,8 @@
             <li>Build Style: Professional Tower | Silent fan configuration</li>
           </ul>
         </div>
-
         <div class="about-photo">
-          <img src="images/mikeysps.jpeg" alt="Streaming Multimedia PC">
+          <img src="images/project3.jpeg" alt="Streaming Multimedia Computer">
         </div>
       </div>
     </section>
