@@ -86,7 +86,7 @@
       background: #ffffff;
       border: 3px solid #000000;
       border-radius: 8px;
-      overflow: hidden; /* mantiene todo dentro sin desbordes raros */
+      overflow: hidden;
     }
 
     /* ========= TITULOS ========= */
@@ -99,7 +99,6 @@
       margin-bottom: 0.5rem;
       border: 2px solid #000;
     }
-    /* línea azul separadora debajo del título */
     h2 + *::before {
       content: "";
       display: block;
@@ -114,29 +113,30 @@
     ul { margin-left: 1.5rem; margin-top: 0.5rem; }
     li { margin-bottom: 0.3rem; }
 
-    /* ========= TARJETAS CON FOTO (layout estable) ========= */
+    /* ========= TARJETAS CON FOTO ========= */
     .about-container {
       display: flex;
       gap: 2rem;
-      align-items: stretch;   /* columnas a la misma altura visual de la tarjeta */
-      min-width: 0;           /* evita overflow por contenido largo */
+      align-items: stretch;
+      min-width: 0;
     }
     .about-text {
       flex: 1 1 60%;
-      min-width: 0;           /* permite que el texto pueda encoger sin romper layout */
+      min-width: 0;
     }
     .about-photo {
       flex: 0 1 40%;
       display: flex;
-      justify-content: center; /* centra horizontalmente dentro de la columna derecha */
-      align-items: center;     /* centra verticalmente respecto al alto de la tarjeta */
-      min-width: 240px;        /* da un ancho mínimo para mantener la foto visible */
+      justify-content: center;
+      align-items: center;
+      min-width: 240px;
     }
     .about-photo img {
-      max-width: 100%;
+      width: 100%;       /* ocupa todo el ancho de la columna */
       height: auto;
-      border: 2px solid #000;  /* borde negro 2px (todas las fotos) */
+      border: 2px solid #000;
       display: block;
+      object-fit: contain; /* mantiene proporciones sin deformar */
     }
 
     /* ========= FOOTER ========= */
