@@ -1,158 +1,227 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Francisco Santiago — Resume</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* ===== Estilo global para todos los h2 ===== */
-    h2 {
-      background-color: #333;   /* gris oscuro */
-      color: #fff;              /* letras blancas */
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      display: inline-block;
-      margin-bottom: 0.5rem;    /* espacio antes del texto */
-      border: 2px solid #000;   /* borde negro */
-    }
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header class="site-header" role="banner">
-    <div class="header-content">
-      <div class="identity-text">
-        <h1 class="site-title">Francisco Santiago Merced</h1>
-        <ul class="contact" role="list">
-          <li>Email: <a href="mailto:fr506021@ucf.edu">fr506021@ucf.edu</a></li>
-          <li><a href="https://www.linkedin.com/in/francisco-santiago-a5035621b" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="tel:+14077478712">407-747-8712</a></li>
-        </ul>
-      </div>
+/* ========= RESET ========= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-      <nav aria-label="Primary" class="primary-nav">
-        <ul role="list">
-          <li><a href="index.html">About Me</a></li>
-          <li><a href="index.html#mission">My Mission</a></li>
-          <li><a href="resume.html" aria-current="page">Resume</a></li>
-          <li><a href="project-1.html">Project 1</a></li>
-          <li><a href="project-2.html">Project 2</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+html {
+  height: 100%;
+}
 
-  <!-- Main content -->
-  <main>
-    <!-- Project 1 -->
-    <section id="project1">
-      <div class="about-container">
-        <div class="about-text">
-          <h2>Gaming | Performance Computer</h2>
-          <p>
-            This computer was built in 2020 for a customer looking for powerful
-            and affordable options to play computer games while maximizing hardware
-            and software capabilities.
-          </p>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
+  background-attachment: fixed;  /* el gradient acompaña hasta el footer */
+  color: #1a1a1a;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-          <h3>🔹 Tools & Skills</h3>
-          <ul>
-            <li>Windows installer</li>
-            <li>Hardware and Design Skills</li>
-            <li>Budget Management & Prioritization</li>
-          </ul>
+/* ========= HEADER ========= */
+.site-header {
+  border: 3px solid #000000;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0 2rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
 
-          <h3>Additional Information</h3>
-          <ul>
-            <li>Specs: Ryzen 5 5600x, 32 GB RAM, AMD 6600XT Graphics, KRAKEN water cooling unit</li>
-            <li>Project Timeframe: 4 weeks</li>
-            <li>Professional wiring & optimization</li>
-            <li>Build Style: Gaming Open Case Style | Modular Construction</li>
-          </ul>
-        </div>
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-        <div class="about-photo">
-          <img src="images/franspc.jpeg" 
-               alt="Gaming PC built for Francisco" 
-        </div>
-      </div>
-    </section>
+/* Bloque izquierdo (nombre + contactos) */
+.identity-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .5rem;
+}
 
-    <!-- Project 2 -->
-    <section id="project2">
-      <div class="about-container">
-        <div class="about-text">
-          <h2>Virtual Reality | Research Computer</h2>
-          <p>
-            This system was built in 2021 for a client who needed a 
-            reliable and efficient computer to experiment with new
-            virtual reality technology, as well as 3D modeling and
-            programming software.
-          </p>
+.site-title {
+  display: block;
+  font-family: 'Monserrat', sans-serif;
+  font-weight: 700;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  border-radius: 0;
+  margin: 0;
+  align-self: flex-start;
+}
 
-          <h3>🔹 Tools & Skills</h3>
-          <ul>
-            <li>Operating System & Software Installation</li>
-            <li>Virtual Reality Hardware Configuration</li>
-            <li>Cable Management & Thermal Design</li>
-          </ul>
+/* Barra de contacto */
+.contact {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  background-color: #36AEBF;
+  border: 2px solid #000;
+  border-radius: 0;
+  margin: 0;
+  align-self: flex-start;
+}
+.contact li { margin: 0; padding: 0; }
+.contact a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  display: inline-block;
+  transition: color .2s;
+}
+.contact a:hover { color: #000; }
 
-          <h3>Additional Information</h3>
-          <ul>
-            <li>Specs: Ryzen 7 9700, RTX 3060 TI, 32 GB RAM, Fan Cooling System</li>
-            <li>Project Timeframe: 2 months 2 weeks</li>
-            <li>Professional Wiring and Optimization</li>
-            <li>Build Style: Home Office | Modular Construction</li>
-          </ul>
-        </div>
+/* ========= MENÚ DERECHO ========= */
+.primary-nav {
+  background-color: #333;
+  border: 2px solid #000;
+  border-radius: 0;
+}
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.primary-nav a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background 0.2s, color 0.2s;
+}
+.primary-nav a:hover {
+  background-color: #0a66c2;
+  color: #fff;
+}
 
-        <div class="about-photo">
-          <img src="images/Joelsps.jpeg" 
-               alt="Virtual Reality PC built for Joel" 
-               width="400" height="250">
-        </div>
-      </div>
-    </section>
+/* ========= CONTENIDO ========= */
+main {
+  max-width: 1200px;   /* expandido para fotos y texto */
+  margin: 0 auto;
+  padding: 1rem 0;
+  flex: 1;
+}
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 8px;
+}
 
-    <!-- Project 3 -->
-    <section id="project3">
-      <div class="about-container">
-        <div class="about-text">
-          <h2>Streaming | Multimedia Computer</h2>
-          <p>
-            Designed in 2023 for a content creator who required strong performance 
-            for video editing, graphic design, and streaming. Focus was placed on 
-            GPU power and high-speed storage.
-          </p>
+/* ========= TITULOS DE LAS TARJETAS ========= */
+h2 {
+  background-color: #333;   /* gris oscuro */
+  color: #fff;              /* letras blancas */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  border: 2px solid #000;   /* borde negro */
+}
 
-          <h3>🔹 Tools & Skills</h3>
-          <ul>
-            <li>Adobe Suite Optimization</li>
-            <li>High-speed SSD and RAID setup</li>
-            <li>Performance Tuning & Stress Testing</li>
-          </ul>
+/* Línea azul debajo de cada título */
+h2 + *::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #0a66c2;
+  margin: 0.6rem 0 1rem;
+  width: 100%;
+}
 
-          <h3>Additional Information</h3>
-          <ul>
-            <li>Specs: Intel i7 12700K, 32 GB RAM, NVIDIA RTX 3080, Dual NVMe 2TB SSDs</li>
-            <li>Project Timeframe: 3 weeks</li>
-            <li>Noise Reduction, AIO Water Cooling</li>
-            <li>Build Style: Professional Tower | Silent fan configuration</li>
-          </ul>
-        </div>
+h3 { margin-bottom: 0.5rem; color: #333; }
+h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
 
-        <div class="about-photo">
-          <img src="images/mikeysps.jpeg" 
-               alt="Streaming PC built for Miche" 
-               width="400" height="250">
-        </div>
-      </div>
-    </section>
-  </main>
+ul { margin-left: 1.5rem; margin-top: 0.5rem; }
+li { margin-bottom: 0.3rem; }
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© 2025 Francisco Santiago Merced · All Rights Reserved</p>
-  </footer>
-</body>
-</html>
+/* ========= ABOUT / TARJETAS CON FOTO ========= */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.about-text { flex: 1 1 58%; }
+.about-photo { flex: 1 1 42%; }
+.about-photo { margin: 0; }
+.about-text h2 { margin-top: 0; }
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;   /* ← borde negro de 2px aplicado aquí */
+  border-radius: 0;
+}
+
+/* === SPECIAL TITLES: About & Mission === */
+#about h2,
+#mission h2 {
+  background-color: #333;   /* gris oscuro */
+  color: #fff;              /* blanco */
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border: 2px solid #000;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Blue line BELOW About Me & My Mission specifically */
+#about h2::after,
+#mission h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #0a66c2;
+  margin-top: 0.6rem;
+  width: 100%;
+}
+
+/* ========= FOOTER ========= */
+.site-footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  border-top: 2px solid #000;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 900px) {
+  .site-title { font-size: 1.1rem; }
+}
+
+@media (max-width: 700px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .primary-nav { width: 100%; }
+  .primary-nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .primary-nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
