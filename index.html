@@ -11,7 +11,7 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      line-height: 1.6; 
       background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
       color: #1a1a1a;
       padding: 0 1rem;
@@ -111,11 +111,25 @@
       border-radius: 8px;
     }
 
+    /* Titles */
     h2 {
-      margin-bottom: 1rem;
-      color: #0a66c2;
-      border-bottom: 2px solid #e0e6ed;
-      padding-bottom: 0.3rem;
+      background-color: #333;   /* dark gray box */
+      color: #fff;              /* white text */
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      border: 2px solid #000;
+    }
+
+    /* Blue divider line BELOW the gray box */
+    h2::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: #0a66c2;
+      margin-top: 0.5rem;
+      width: 100%;
     }
 
     .about-container {
@@ -156,14 +170,6 @@
       .primary-nav a { text-align: center; }
     }
   </style>
-</head>
-<body>
-  <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Francisco Santiago — Resume</title>
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header -->
