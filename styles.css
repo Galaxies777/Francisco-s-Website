@@ -189,6 +189,12 @@ li { margin-bottom: 0.3rem; }
   width: 100%;
 }
 
+/* ========= CHANGE FONT ONLY FOR ABOUT ME ========= */
+#about .about-text p,
+#about .about-text li {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* ========= FOOTER ========= */
 .site-footer {
   width: 100%;
