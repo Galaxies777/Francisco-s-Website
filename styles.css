@@ -201,6 +201,12 @@ li { margin-bottom: 0.3rem; }
   font-family: 'Times New Roman', Times, serif;
 }
 
+/* ========= CHANGE FONT ONLY FOR RESUME ========= */
+#resume p,
+#resume li {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 /* ========= FOOTER ========= */
 .site-footer {
   width: 100%;
