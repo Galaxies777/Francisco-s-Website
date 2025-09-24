@@ -195,15 +195,14 @@ li { margin-bottom: 0.3rem; }
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* ========= CHANGE FONT ONLY FOR MY MISSION ========= */
+/* ========= CHANGE FONT ONLY FOR MISSION ========= */
 #mission .about-text p,
 #mission .about-text li {
   font-family: 'Times New Roman', Times, serif;
 }
 
 /* ========= CHANGE FONT ONLY FOR RESUME ========= */
-#resume p,
-#resume li {
+#resume {
   font-family: 'Times New Roman', Times, serif;
 }
 
