@@ -192,7 +192,13 @@ li { margin-bottom: 0.3rem; }
 /* ========= CHANGE FONT ONLY FOR ABOUT ME ========= */
 #about .about-text p,
 #about .about-text li {
-  font-family: 'Times New Roman',Times, serif;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* ========= CHANGE FONT ONLY FOR MY MISSION ========= */
+#mission .about-text p,
+#mission .about-text li {
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* ========= FOOTER ========= */
@@ -233,4 +239,3 @@ li { margin-bottom: 0.3rem; }
     text-align: center;
   }
 }
-
