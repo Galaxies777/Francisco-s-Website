@@ -150,16 +150,17 @@ li { margin-bottom: 0.3rem; }
 .about-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;   /* <<--- centrado vertical */
+  align-items: center;   /* center vertically */
   gap: 2rem;
 }
 .about-text { flex: 1 1 58%; }
-.about-photo { 
-  flex: 1 1 42%; 
-  display: flex;          /* <<--- centrado horizontal */
-  justify-content: center;
+.about-photo {
+  flex: 1 1 42%;
+  display: flex;             /* make it a flex container */
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  margin: 0;
 }
-.about-photo { margin: 0; }
 .about-text h2 { margin-top: 0; }
 
 /* Solo las fotos: borde negro de 2px */
