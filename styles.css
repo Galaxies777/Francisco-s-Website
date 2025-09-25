@@ -150,11 +150,15 @@ li { margin-bottom: 0.3rem; }
 .about-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;   /* <<--- centrado vertical */
   gap: 2rem;
 }
 .about-text { flex: 1 1 58%; }
-.about-photo { flex: 1 1 42%; }
+.about-photo { 
+  flex: 1 1 42%; 
+  display: flex;          /* <<--- centrado horizontal */
+  justify-content: center;
+}
 .about-photo { margin: 0; }
 .about-text h2 { margin-top: 0; }
 
@@ -164,6 +168,7 @@ li { margin-bottom: 0.3rem; }
   height: auto;
   border: 2px solid #000;  /* borde negro de 2px */
   border-radius: 0;
+  display: block;
 }
 
 /* === SPECIAL TITLES: About & Mission === */
