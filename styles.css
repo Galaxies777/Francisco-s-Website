@@ -154,18 +154,18 @@ li { margin-bottom: 0.3rem; }
   gap: 2rem;
 }
 .about-text { flex: 1 1 58%; }
-
 .about-photo {
   flex: 1 1 42%;
-  display: flex;
+  display: flex;             /* make it a flex container */
   justify-content: center;   /* center horizontally */
   align-items: center;       /* center vertically */
   margin: 0;
 }
 .about-text h2 { margin-top: 0; }
 
+/* Solo las fotos: borde negro de 2px */
 .about-photo img {
-  max-width: 90%;    /* prevent overflow */
+  width: 100%;
   height: auto;
   border: 2px solid #000;  /* borde negro de 2px */
   border-radius: 0;
