@@ -165,7 +165,7 @@ li { margin-bottom: 0.3rem; }
 
 /* Solo las fotos: borde negro de 2px */
 .about-photo img {
-  max-width: 100%;     /* más grande dentro del contenedor */
+  max-width: 95%;     /* más grande dentro del contenedor */
   max-height: 450px;  /* evita que se dispare hacia abajo */
   height: auto;
   border: 2px solid #000;  /* borde negro de 2px */
@@ -250,5 +250,11 @@ li { margin-bottom: 0.3rem; }
     align-items: center;
     text-align: center;
   }
+}
+
+/* ========= MISSION IMAGE LARGER ========= */
+#mission .about-photo img {
+  max-width: 100%;   /* ocupa todo el ancho posible */
+  max-height: 500px; /* más alta que la de About */
 }
 
