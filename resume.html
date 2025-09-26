@@ -5,6 +5,39 @@
   <title>Francisco Santiago — Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Section headers (h3) styled as white text in dark gray box */
+    #resume h3 {
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: 2px solid #000;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    /* PDF buttons styled with azure blue */
+    .pdf-links {
+      margin: 1rem 0;
+    }
+
+    .pdf-links a {
+      background-color: #36AEBF; /* azure color */
+      color: #fff; 
+      padding: 0.5rem 1rem;
+      border: 2px solid #000;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+
+    .pdf-links a:hover {
+      background-color: #2a8d9c; /* darker azure on hover */
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -15,6 +48,7 @@
         <ul class="contact" role="list">
           <li>Email: <a href="mailto:fr506021@ucf.edu">fr506021@ucf.edu</a></li>
           <li><a href="https://www.linkedin.com/in/francisco-santiago-a5035621b" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://ucf.joinhandshake.com/profiles/5vpz64" target="_blank" rel="noopener">Handshake</a></li>
         </ul>
       </div>
 
@@ -22,7 +56,6 @@
         <ul role="list">
           <li><a href="index.html">About Me</a></li>
           <li><a href="index.html#mission">My Mission</a></li>
-          <!-- This is the resume page, so mark it current -->
           <li><a href="resume.html" aria-current="page">Resume</a></li>
           <li><a href="project-1.html">Project 1</a></li>
           <li><a href="project-2.html">Project 2</a></li>
@@ -36,7 +69,7 @@
     <section id="resume">
       <h2>Resume</h2>
 
-      <!-- PDF Links (optional) -->
+      <!-- PDF Links -->
       <p class="pdf-links">
         <a href="Francisco Santiagos Official Resume.pdf" download>Download PDF</a>
         <a href="Francisco Santiagos Official Resume.pdf" target="_blank" rel="noopener">Open PDF in new tab</a>
@@ -56,7 +89,6 @@
       <!-- Education -->
       <section class="education">
         <h3>Education</h3>
-
         <article>
           <h4>University of Central Florida — B.S. Information Technology (GPA 3.0)</h4>
           <p>Orlando, FL — Fall 2021 – Spring 2026 (Expected)</p>
@@ -65,7 +97,6 @@
             <li>GPA: 3.0</li>
           </ul>
         </article>
-
         <article>
           <h4>Valencia College — Associate in Arts | General Studies</h4>
           <p>Orlando, FL — Spring 2019 – Spring 2021</p>
@@ -79,24 +110,22 @@
       <!-- Professional Experience -->
       <section class="experience">
         <h3>Professional Experience</h3>
-
         <article>
           <h4>Lebron Group Surveying and Mapping — IT Support · Office Key Holder</h4>
-          <p>Orlando, FL — <time datetime="2023-05">May 2023</time> – <time datetime="2023-08">Aug 2023</time></p>
+          <p>Orlando, FL — May 2023 – Aug 2023</p>
           <ul>
-            <li>Provided day-to-day technical support for surveying staff, including troubleshooting workstations and mobile devices used with mapping software.</li>
+            <li>Provided day-to-day technical support for surveying staff.</li>
             <li>Maintained and organized digital survey records and mapping files.</li>
             <li>Assisted with mid-scale hardware, IoT, and network setup to improve office efficiency.</li>
           </ul>
         </article>
-
         <article>
           <h4>Elite Wireless — Sales Specialist · IT Technician · Store Key Holder</h4>
-          <p>Apopka, FL — <time datetime="2024-09">Sep 2024</time> – Sep 2025</p>
+          <p>Apopka, FL — Sep 2024 – Sep 2025</p>
           <ul>
-            <li>Increased monthly sales through personalized customer interactions and targeted customer service.</li>
-            <li>Diagnosed and resolved issues for iOS, Android, and Windows devices; internet, IoT, and POS systems.</li>
-            <li>Oversaw daily store operations (open/close), cash handling, and team metrics per company policies.</li>
+            <li>Increased monthly sales through personalized customer interactions and targeted service.</li>
+            <li>Diagnosed and resolved issues for iOS, Android, and Windows devices, IoT, and POS systems.</li>
+            <li>Oversaw daily store operations, cash handling, and team metrics per company policies.</li>
           </ul>
         </article>
       </section>
@@ -104,22 +133,20 @@
       <!-- Education-related Experience -->
       <section class="experience">
         <h3>Education-related Experience</h3>
-
         <article>
           <h4>University of Central Florida — CREAR Futuros Mentor</h4>
-          <p>Orlando, FL — <time datetime="2025-01">Jan 2025</time> – Present</p>
+          <p>Orlando, FL — Jan 2025 – Present</p>
           <ul>
             <li>Mentor in a culturally responsive peer program supporting Latinx student success.</li>
-            <li>Collaborate on event design, team goals, and 1:1 coaching to drive retention and engagement.</li>
+            <li>Collaborated on event design, team goals, and 1:1 coaching to drive retention and engagement.</li>
           </ul>
         </article>
-
         <article>
           <h4>UCF Office of Student Involvement — HSI Ambassador</h4>
-          <p>Orlando, FL — <time datetime="2023-08">Aug 2023</time> – <time datetime="2024-07">Jul 2024</time></p>
+          <p>Orlando, FL — Aug 2023 – Jul 2024</p>
           <ul>
             <li>Represented UCF’s HSI initiatives, fostering an inclusive environment for Latinx students.</li>
-            <li>Engaged prospective/current students with resources that encourage involvement and retention.</li>
+            <li>Engaged prospective/current students with resources to encourage involvement and retention.</li>
           </ul>
         </article>
       </section>
@@ -128,10 +155,10 @@
       <section class="awards">
         <h3>Awards & Honors</h3>
         <ul>
-          <li>Hispanic Federation Scholarship Recipient — <time datetime="2025-06">June 2025</time> – <time datetime="2025-09">Sep 2025</time></li>
-          <li>HACU Kia America Scholarship Recipient — <time datetime="2024-10">Oct 2024</time> – <time datetime="2025-05">May 2025</time></li>
-          <li>Certificate of Recognition — CREAR Futuros Program for leadership and mentorship excellence (<time datetime="2025-05">May 2025</time>)</li>
-          <li>Dean’s List — <time datetime="2025-04">Apr 2025</time> – <time datetime="2025-05">May 2025</time></li>
+          <li>Hispanic Federation Scholarship Recipient — June 2025 – Sep 2025</li>
+          <li>HACU Kia America Scholarship Recipient — Oct 2024 – May 2025</li>
+          <li>Certificate of Recognition — CREAR Futuros Program (May 2025)</li>
+          <li>Dean’s List — Apr 2025 – May 2025</li>
         </ul>
       </section>
 
