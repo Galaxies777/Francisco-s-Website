@@ -39,7 +39,7 @@ body {
 .identity-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;   /* stretch children to same width */
   gap: .5rem;
 }
 
@@ -53,7 +53,7 @@ body {
   border: 2px solid #000;
   border-radius: 0;
   margin: 0;
-  align-self: flex-start;
+  width: 100%;            /* make it full width inside parent */
 }
 
 /* Barra de contacto */
@@ -67,7 +67,7 @@ body {
   border: 2px solid #000;
   border-radius: 0;
   margin: 0;
-  align-self: flex-start;
+  width: 100%;            /* match width with site-title */
 }
 .contact li { margin: 0; padding: 0; }
 .contact a {
