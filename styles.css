@@ -262,6 +262,11 @@ li { margin-bottom: 0.3rem; }
 }
 
 /* ========= PROJECT 1 FONT ========= */
-#project1 {
+#project1,
+#project1 h2,
+#project1 h3,
+#project1 h4,
+#project1 p,
+#project1 li {
   font-family: 'Times New Roman', Times, serif;
 }
