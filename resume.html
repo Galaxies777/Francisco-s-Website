@@ -6,41 +6,191 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    /* ========= HEADINGS INSIDE RESUME ========= */
-    #resume h3 {
-      background-color: #333;   /* dark gray box */
-      color: #fff;              /* white text */
+    /* Baseline reset so spacing and sizing behave consistently */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { height: 100%; }
+
+    /* Page canvas: global typography, gradient background, and full-height layout */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
+      background-attachment: fixed;
+      color: #1a1a1a;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header card: white surface with border, rounded corners, and a soft shadow */
+    .site-header {
+      border: 3px solid #000000;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0 2rem;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    }
+
+    /* Header layout: identity block on the left, navigation on the right */
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Stacks the name and the contact ribbon vertically */
+    .identity-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .5rem;
+    }
+
+    /* Name badge: bold dark strip for strong hierarchy */
+    .site-title {
+      display: block;
+      font-weight: 700;
+      background-color: #333;
+      color: #fff;
       padding: 0.5rem 1rem;
-      border: 2px solid #000;   /* black border */
-      border-radius: 6px;       /* slightly curved edges */
+      border: 2px solid #000;
+      margin: 0;
+    }
+
+    /* Contact ribbon: azure bar holding Email, LinkedIn, and Handshake links */
+    .contact {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0.5rem 1rem;
+      font-weight: 700;
+      background-color: #36AEBF;
+      border: 2px solid #000;
+      margin: 0;
+    }
+    .contact a { color: #fff; text-decoration: none; }
+    .contact a:hover { color: #000; }
+
+    /* Primary navigation: dark bar with horizontal menu items */
+    .primary-nav { background-color: #333; border: 2px solid #000; }
+    .primary-nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+    .primary-nav a {
+      color: #fff; font-weight: bold; text-decoration: none;
+      padding: 0.5rem 1rem; display: block;
+    }
+    .primary-nav a:hover { background-color: #0a66c2; }
+
+    /* Main column: centers the content and constrains width */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 0;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* Section cards: white surfaces with borders and rounded corners */
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: #ffffff;
+      border: 3px solid #000000;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Section titles: dark label with white text and a solid border */
+    h2 {
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
       display: inline-block;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+      border: 2px solid #000;
     }
 
-    /* ========= PDF LINKS ========= */
-    .pdf-links {
-      margin: 1rem 0;
+    /* Thin blue divider that appears right after an h2 */
+    h2 + *::before {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: #0a66c2;
+      margin: 0.6rem 0 1rem;
+      width: 100%;
     }
 
-    .pdf-links a {
-      background-color: #36AEBF; /* your azure color */
-      color: #fff;               /* white text */
-      padding: 0.5rem 1rem;
-      border: 2px solid #000;    /* black border */
-      border-radius: 6px;        /* slightly curved edges */
+    /* Subheadings and list rhythm */
+    h3 { margin-bottom: 0.5rem; color: #333; }
+    h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
+    ul { margin-left: 1.5rem; margin-top: 0.5rem; }
+    li { margin-bottom: 0.3rem; }
+
+    /* Split layout for project cards: text on the left, image on the right */
+    .about-container {
+      display: flex;
+      gap: 2rem;
+      align-items: stretch;
+      min-width: 0;
+    }
+
+    /* Text column grows a bit more to favor readability */
+    .about-text {
+      flex: 1 1 60%;
+      min-width: 0;
+    }
+
+    /* Image column centers its media and has a minimum width for stability */
+    .about-photo {
+      flex: 0 1 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 240px;
+    }
+
+    /* Images fill their column width, keep aspect ratio, and get a clean border */
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #000;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* Footer strip: dark background with centered text */
+    .site-footer {
+      width: 100%;
+      background-color: #333;
+      color: #fff;
       font-weight: bold;
-      text-decoration: none;
-      margin-right: 0.5rem;
-      display: inline-block;
+      border-top: 2px solid #000;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
     }
 
-    .pdf-links a:hover {
-      background-color: #2a8d9c; /* darker shade of azure on hover */
+    /* Tablet tweak: loosen image constraints so stacking feels natural */
+    @media (max-width: 900px) {
+      .about-photo { min-width: 0; }
+    }
+
+    /* Mobile layout: stack header/nav and center card content */
+    @media (max-width: 700px) {
+      .header-content { flex-direction: column; align-items: flex-start; }
+      .primary-nav { width: 100%; }
+      .primary-nav ul { flex-direction: column; width: 100%; }
+      .primary-nav a { text-align: center; }
+      .about-container { flex-direction: column; align-items: center; text-align: center; }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- Header: identity on the left (name + links) and navigation on the right -->
   <header class="site-header" role="banner">
     <div class="header-content">
       <div class="identity-text">
@@ -64,137 +214,89 @@
     </div>
   </header>
 
-  <main id="main">
-    <section id="resume">
-      <h2>Resume</h2>
-
-      <!-- Download PDF -->
-      <p class="pdf-links">
-        <a href="Francisco Santiagos Official Resume.pdf" download>
-          Download PDF
-        </a>
-        <a href="Francisco Santiagos Official Resume.pdf" target="_blank" rel="noopener">
-          Open PDF in new tab
-        </a>
-      </p>
-
-      <!-- Objective -->
-      <section class="objective">
-        <h3>Career Objective</h3>
-        <p>
-          To obtain an IT position where I can leverage from my hands-on experience in device
-          troubleshooting, computer building, and customer support to deliver responsive and reliable 
-          solutions to clients while continuing to grow in systems and network administration and aid
-          the company strenghten their talent to meet goals and growth.
-        </p>
-      </section>
-
-      <!-- Education (Newest → Oldest) -->
-      <section class="education">
-        <h3>Education</h3>
-
-        <article>
-          <h4>University of Central Florida — B.S. Information Technology (GPA 3.0)</h4>
-          <p>Orlando, FL — Fall 2021 – Spring 2026 (Expected)</p>
+  <!-- Main column: three project sections with text + image layout -->
+  <main>
+    <!-- Project 1 card -->
+    <section id="project1">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Gaming | Performance Computer</h2>
+          <p>This computer was built in 2020 for a customer looking for powerful and affordable options to play computer games while maximizing hardware and software capabilities.</p>
+          <h3>🔹 Tools & Skills</h3>
           <ul>
-            <li>College of Engineering and Computer Science (CECS)</li>
-            <li>GPA: 3.0</li>
+            <li>Windows installer</li>
+            <li>Hardware and Design Skills</li>
+            <li>Budget Management & Prioritization</li>
           </ul>
-        </article>
-
-        <article>
-          <h4>Valencia College — Associate in Arts | General Studies</h4>
-          <p>Orlando, FL — Spring 2019 – Spring 2021</p>
+          <h3>Additional Information</h3>
           <ul>
-            <li>General courses in preparation for Bachelors in IT</li>
-            <li>GPA: 3.82</li>
+            <li>Specs: Ryzen 5 5600x, 32 GB RAM, AMD 6600XT Graphics, KRAKEN water cooling unit</li>
+            <li>Project Timeframe: 4 weeks</li>
+            <li>Professional wiring & optimization</li>
+            <li>Build Style: Gaming Open Case Style | Modular Construction</li>
           </ul>
-        </article>
-      </section>
+        </div>
+        <div class="about-photo">
+          <img src="images/franspc.jpeg" alt="Gaming Performance Computer">
+        </div>
+      </div>
+    </section>
 
-      <!-- Professional Experience -->
-      <section class="experience">
-        <h3>Professional Experience</h3>
-
-        <article>
-          <h4>Lebron Group Surveying and Mapping . IT Support . Office Key Holder</h4>
-          <p>Orlando, FL — <time datetime="2023-05">May 2023</time> – <time datetime="2023-08">Aug 2023</time></p>
+    <!-- Project 2 card -->
+    <section id="project2">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Virtual Reality | Research Computer</h2>
+          <p>This system was built in 2021 for a client who needed a reliable and efficient computer to experiment with new virtual reality technology, as well as 3D modeling and programming software.</p>
+          <h3>🔹 Tools & Skills</h3>
           <ul>
-            <li>Provided day-to-day technical support for surveying staff, including troubleshooting workstations and mobile devices used with mapping software.</li>
-            <li>Responsible for maintaining and organizing digital survey records and mapping files.</li>
-            <li>Helped with mid-scale hardware, IoT, and network setup to improve office efficiency.</li>
+            <li>Operating System & Software Installation</li>
+            <li>Virtual Reality Hardware Configuration</li>
+            <li>Cable Management & Thermal Design</li>
           </ul>
-        </article>
-        
-        <article>
-          <h4>Elite Wireless — Sales Specialist · IT Technician · Store Key Holder</h4>
-          <p>Apopka, FL — <time datetime="2024-09">Sep 2024</time> – Sep 2025</p>
+          <h3>Additional Information</h3>
           <ul>
-            <li>Increased monthly sales through personalized customer interactions and targetted customer service.</li>
-            <li>Diagnosed and resolved technical issues for iOS,Android, and Windows devices, internet, IoT, and POS systems.</li>
-            <li>Oversaw daily store operations (open/close), cash handling, and team metrics in compliance with company policies.</li>
+            <li>Specs: Ryzen 7 9700, RTX 3060 TI, 32 GB RAM, Fan Cooling System</li>
+            <li>Project Timeframe: 2 months 2 weeks</li>
+            <li>Professional Wiring and Optimization</li>
+            <li>Build Style: Home Office | Modular Construction</li>
           </ul>
-        </article>
-      </section>
+        </div>
+        <div class="about-photo">
+          <img src="images/Joelsps.jpeg" alt="Virtual Reality Research Computer">
+        </div>
+      </div>
+    </section>
 
-      <!-- Education-related Experience -->
-      <section class="experience">
-        <h3>Education-related Experience</h3>
-        <article>
-          <h4>University of Central Florida — CREAR Futuros Mentor</h4>
-          <p>Orlando, FL — <time datetime="2025-01">Jan 2025</time> – Present</p>
+    <!-- Project 3 card -->
+    <section id="project3">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Streaming | Multimedia Computer</h2>
+          <p>Designed in 2023 for a content creator who required strong performance for video editing, graphic design, and streaming. Focus was placed on GPU power and high-speed storage.</p>
+          <h3>🔹 Tools & Skills</h3>
           <ul>
-            <li>Mentor in a culturally responsive peer program supporting Latinx student success.</li>
-            <li>Collaborate on event design, team goals, and 1:1 coaching to drive retention and engagement.</li>
+            <li>Adobe Suite Optimization</li>
+            <li>High-speed SSD and RAID setup</li>
+            <li>Performance Tuning & Stress Testing</li>
           </ul>
-        </article>
-
-        <article>
-          <h4>UCF Office of Student Involvement — HSI Ambassador</h4>
-          <p>Orlando, FL — <time datetime="2023-08">Aug 2023</time> – <time datetime="2024-07">Jul 2024</time></p>
+          <h3>Additional Information</h3>
           <ul>
-            <li>Represented UCF’s HSI initiatives, fostering an inclusive environment for Latinx students.</li>
-            <li>Engaged prospective/current students with resources that encourage involvement and retention.</li>
+            <li>Specs: Intel i7 12700K, 32 GB RAM, NVIDIA RTX 3080, Dual NVMe 2TB SSDs</li>
+            <li>Project Timeframe: 3 weeks</li>
+            <li>Noise Reduction, AIO Water Cooling</li>
+            <li>Build Style: Professional Tower | Silent fan configuration</li>
           </ul>
-        </article>
-      </section>
-
-      <!-- Awards & Honors -->
-      <section class="awards">
-        <h3>Awards & Honors</h3>
-        <ul>
-          <li>Hispanic Federation Scholarship Recipient— <time datetime="2024-10">June 2025</time> – <time datetime="2025-05">Sep 2025</time></li>
-          <li>HACU Kia America Scholarship Recipient — <time datetime="2024-10">Oct 2024</time> – <time datetime="2025-05">May 2025</time></li>
-          <li>Certificate of Recognition — CREAR Futuros Program, for leadership and mentorship excellence (<time datetime="2025-05">May 2025</time>)</li>
-          <li>Dean’s List — <time datetime="2025-04">Apr 2025</time> – <time datetime="2025-05">May 2025</time></li>
-        </ul>
-      </section>
-
-      <!-- Certifications -->
-      <section class="certifications">
-        <h3>Certifications</h3>
-        <ul>
-          <li>CompTIA A+ — Certified</li>
-          <li>TestOut IT Fundamentals — Certified</li>
-          <li>LinkedIn Learning — Project Management Basics Course - Certified</li>
-        </ul>
-      </section>
-
-      <!-- Technical Skills -->
-      <section class="skills">
-        <h3>Technical & Professional Skills</h3>
-        <ul>
-          <li>Bilingual: English & Spanish</li>
-          <li>Computer Hardware Expert; Device Troubleshooting (mobile/desktop)</li>
-          <li>Sales Training; Customer Service Training; Leadership Training</li>
-          <li>Cloud & Programming Training (foundational)</li>
-        </ul>
-      </section>
+        </div>
+        <div class="about-photo">
+          <img src="images/mikeysps.jpeg" alt="Streaming Multimedia Computer">
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- Footer: copyright line -->
+  <footer class="site-footer">
     <p>© 2025 Francisco Santiago Merced · All Rights Reserved</p>
   </footer>
 </body>
