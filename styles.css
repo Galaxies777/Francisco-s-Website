@@ -165,7 +165,8 @@ li { margin-bottom: 0.3rem; }
 
 /* Solo las fotos: borde negro de 2px */
 .about-photo img {
-  max-width: 80%;   /* mantiene proporción en ambas secciones */
+  max-width: 95%;     /* más grande dentro del contenedor */
+  max-height: 450px;  /* evita que se dispare hacia abajo */
   height: auto;
   border: 2px solid #000;  /* borde negro de 2px */
   border-radius: 0;
