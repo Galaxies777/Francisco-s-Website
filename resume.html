@@ -16,6 +16,27 @@
       display: inline-block;
       margin-bottom: 1rem;
     }
+
+    /* ========= PDF LINKS ========= */
+    .pdf-links {
+      margin: 1rem 0;
+    }
+
+    .pdf-links a {
+      background-color: #0a66c2; /* blue box */
+      color: #fff;               /* white text */
+      padding: 0.5rem 1rem;
+      border: 2px solid #000;    /* black border */
+      border-radius: 6px;        /* slightly curved edges */
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+
+    .pdf-links a:hover {
+      background-color: #004080; /* darker blue on hover */
+    }
   </style>
 </head>
 <body>
@@ -47,11 +68,10 @@
       <h2>Resume</h2>
 
       <!-- Download PDF -->
-      <p>
+      <p class="pdf-links">
         <a href="Francisco Santiagos Official Resume.pdf" download>
           Download PDF
         </a>
-        &nbsp;|&nbsp;
         <a href="Francisco Santiagos Official Resume.pdf" target="_blank" rel="noopener">
           Open PDF in new tab
         </a>
