@@ -289,3 +289,49 @@ li { margin-bottom: 0.3rem; }
 #project3 li {
   font-family: 'Times New Roman', Times, serif;
 }
+
+/* ============ RESPONSIVE ENHANCEMENTS ============ */
+
+/* Let nav/contact wrap neatly on smaller widths */
+.primary-nav ul { flex-wrap: wrap; }
+.contact { flex-wrap: wrap; }
+
+/* Make ALL images naturally shrink to their containers (safe, global) */
+img { max-width: 100%; height: auto; }
+
+/* Large tablets and small laptops */
+@media (max-width: 1200px) {
+  main { padding: 1rem; }
+  .about-container { gap: 1.5rem; }
+}
+
+/* Tablets (portrait/landscape) */
+@media (max-width: 1024px) {
+  h2 { font-size: 1.15rem; }
+  .contact { gap: 0.75rem; }
+  .about-photo img { max-height: 400px; }
+}
+
+/* Phones (general) */
+@media (max-width: 600px) {
+  body { padding: 0 0.75rem; }
+  .site-header { padding: 0.75rem 1rem; }
+  h2 { font-size: 1.05rem; }
+  .primary-nav a { padding: 0.5rem 0.75rem; }
+  section { padding: 0.75rem; }
+  .about-container { gap: 1rem; }
+  .about-photo img { max-height: 55vh; } /* keep tall images in view */
+}
+
+/* Small phones */
+@media (max-width: 500px) {
+  ul { margin-left: 1rem; }
+  .contact { gap: 0.5rem; padding: 0.5rem 0.75rem; }
+  .site-title { font-size: 1rem; }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+  .contact { flex-direction: column; align-items: flex-start; }
+  .primary-nav a { padding: 0.45rem 0.75rem; }
+}
