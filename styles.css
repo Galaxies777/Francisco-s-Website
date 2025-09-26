@@ -260,3 +260,8 @@ li { margin-bottom: 0.3rem; }
   max-height: clamp(400px, 50vw, 600px);         /* más grande pero balanceado */
   height: auto;
 }
+
+/* ========= PROJECT 1 FONT ========= */
+#project1 {
+  font-family: 'Times New Roman', Times, serif;
+}
