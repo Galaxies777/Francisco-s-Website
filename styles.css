@@ -155,7 +155,7 @@ li { margin-bottom: 0.3rem; }
 }
 .about-text { flex: 1 1 50%; }   /* antes 58% */
 .about-photo {
-  flex: 1 1 70%;         /* antes 42% */
+  flex: 1 1 50%;         /* antes 42% */
   display: flex;             /* make it a flex container */
   justify-content: center;   /* center horizontally */
   align-items: center;       /* center vertically */
@@ -165,7 +165,7 @@ li { margin-bottom: 0.3rem; }
 
 /* Solo las fotos: borde negro de 2px */
 .about-photo img {
-  width: 100%;
+  max-width: 80%;   /* mantiene proporción en ambas secciones */
   height: auto;
   border: 2px solid #000;  /* borde negro de 2px */
   border-radius: 0;
@@ -250,4 +250,3 @@ li { margin-bottom: 0.3rem; }
     text-align: center;
   }
 }
-
