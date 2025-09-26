@@ -155,7 +155,7 @@ li { margin-bottom: 0.3rem; }
 }
 .about-text { flex: 1 1 50%; }   /* antes 58% */
 .about-photo {
-  flex: 1 1 50%;         /* antes 42% */
+  flex: 1 1 70%;         /* antes 42% */
   display: flex;             /* make it a flex container */
   justify-content: center;   /* center horizontally */
   align-items: center;       /* center vertically */
@@ -250,3 +250,4 @@ li { margin-bottom: 0.3rem; }
     text-align: center;
   }
 }
+
