@@ -5,15 +5,13 @@
   <title>Francisco Santiago — Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* Reset basic spacing and box sizing so elements behave consistently */
+    /* Reset */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
 
-    /* General body styling: gradient background, default font, layout setup */
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6; 
@@ -26,7 +24,6 @@
       min-height: 100vh;
     }
 
-    /* Top header box with border, shadow, and spacing */
     .site-header {
       border: 3px solid #000;
       border-radius: 10px;
@@ -36,7 +33,6 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.12);
     }
 
-    /* Header layout: aligns name block and navigation side by side */
     .header-content {
       display: flex;
       justify-content: space-between;
@@ -44,7 +40,6 @@
       flex-wrap: wrap;
     }
 
-    /* Name and contact section on the left */
     .identity-text {
       display: flex;
       flex-direction: column;
@@ -52,7 +47,6 @@
       gap: .5rem;
     }
 
-    /* Big dark title for the name */
     .site-title {
       background-color: #333;
       color: #fff;
@@ -62,7 +56,6 @@
       margin: 0;
     }
 
-    /* Contact bar: email, LinkedIn, Handshake */
     .contact {
       list-style: none;
       display: flex;
@@ -74,28 +67,22 @@
       margin: 0;
     }
 
-    /* Contact links styled white with hover effect */
     .contact a {
       color: #fff;
       text-decoration: none;
     }
     .contact a:hover { color: #000; }
 
-    /* Navigation bar on the right side */
     .primary-nav {
       background-color: #333;
       border: 2px solid #000;
     }
-
-    /* Navigation menu links */
     .primary-nav ul {
       list-style: none;
       display: flex;
       margin: 0;
       padding: 0;
     }
-
-    /* Each navigation item link */
     .primary-nav a {
       color: #fff;
       font-weight: bold;
@@ -107,7 +94,6 @@
       background-color: #0a66c2;
     }
 
-    /* Main content container */
     main {
       max-width: 900px;
       margin: 0 auto;
@@ -115,7 +101,6 @@
       flex: 1;
     }
 
-    /* Each major section box */
     section {
       margin-bottom: 2rem;
       padding: 1rem;
@@ -124,7 +109,6 @@
       border-radius: 8px;
     }
 
-    /* Section titles: dark gray with white text */
     h2 {
       background-color: #333;
       color: #fff;
@@ -135,28 +119,22 @@
       margin-bottom: 1rem;
     }
 
-    /* Subheadings and list formatting */
     h3 { margin-bottom: 0.5rem; color: #333; }
     h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
     ul { margin-left: 1.5rem; margin-top: 0.5rem; }
     li { margin-bottom: 0.3rem; }
 
-    /* About and mission sections arranged in two columns */
     .about-container {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 2rem;
     }
-
-    /* About section photo style */
     .about-photo img {
       max-width: 500px;
       height: auto;
       border: 1px solid #000;
     }
-
-    /* Larger image style used for My Mission photo */
     .mission-photo {
       max-width: 600px;
       width: 80%;
@@ -164,7 +142,6 @@
       border: 2px solid #000;
     }
 
-    /* Footer box at the bottom */
     .site-footer {
       width: 100%;
       background-color: #333;
@@ -176,23 +153,47 @@
       margin-top: 3rem;
     }
 
-    /* Responsive tweaks for medium screens */
     @media (max-width: 800px) {
       .about-container { flex-direction: column; text-align: center; }
       .about-photo { align-self: center; }
     }
-
-    /* Responsive tweaks for small screens */
     @media (max-width: 700px) {
       .header-content { flex-direction: column; align-items: flex-start; }
       .primary-nav { width: 100%; }
       .primary-nav ul { flex-direction: column; width: 100%; }
       .primary-nav a { text-align: center; }
     }
+
+    /* === Resume: white-on-dark subheaders + PDF buttons === */
+    #resume h3 {
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: 2px solid #000;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .pdf-links { margin: 1rem 0; }
+    .pdf-links a {
+      background-color: #36AEBF;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: 2px solid #000;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .pdf-links a:hover { background-color: #2a8d9c; }
+
+    /* === About page tweaks for readability === */
+    #about .about-text { text-align: left; }
+    #about .about-text p { max-width: 70ch; }
   </style>
 </head>
 <body>
-  <!-- Top header with name, contact info, and navigation -->
   <header class="site-header" role="banner">
     <div class="header-content">
       <div class="identity-text">
@@ -206,9 +207,9 @@
 
       <nav aria-label="Primary" class="primary-nav">
         <ul role="list">
-          <li><a href="index.html">About Me</a></li>
+          <li><a href="index.html" aria-current="page">About Me</a></li>
           <li><a href="index.html#mission">My Mission</a></li>
-          <li><a href="resume.html" aria-current="page">Resume</a></li>
+          <li><a href="resume.html">Resume</a></li>
           <li><a href="project-1.html">Project 1</a></li>
           <li><a href="project-2.html">Project 2</a></li>
         </ul>
@@ -216,7 +217,6 @@
     </div>
   </header>
 
-  <!-- Main content with About and Mission sections -->
   <main>
     <section id="about">
       <div class="about-container">
@@ -256,7 +256,6 @@
     </section>
   </main>
 
-  <!-- Footer with rights notice -->
   <footer class="site-footer">
     <p>© 2025 Francisco Santiago Merced · All Rights Reserved</p>
   </footer>
