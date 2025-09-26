@@ -261,12 +261,24 @@ li { margin-bottom: 0.3rem; }
   height: auto;
 }
 
-/* ========= PROJECT 1 FONT ========= */
+/* ========= PROJECTS FONT ========= */
 #project1,
 #project1 h2,
 #project1 h3,
 #project1 h4,
 #project1 p,
-#project1 li {
+#project1 li,
+#project2,
+#project2 h2,
+#project2 h3,
+#project2 h4,
+#project2 p,
+#project2 li,
+#project3,
+#project3 h2,
+#project3 h3,
+#project3 h4,
+#project3 p,
+#project3 li {
   font-family: 'Times New Roman', Times, serif;
 }
