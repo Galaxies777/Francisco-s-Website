@@ -153,9 +153,9 @@ li { margin-bottom: 0.3rem; }
   align-items: center;   /* center vertically */
   gap: 2rem;
 }
-.about-text { flex: 1 1 50%; }   /* antes 58% */
+.about-text { flex: 1 1 50%; }
 .about-photo {
-  flex: 1 1 50%;         /* antes 42% */
+  flex: 1 1 50%;
   display: flex;             /* make it a flex container */
   justify-content: center;   /* center horizontally */
   align-items: center;       /* center vertically */
@@ -253,7 +253,10 @@ li { margin-bottom: 0.3rem; }
 }
 
 /* ========= MISSION IMAGE LARGER ========= */
+#mission .about-text  { flex: 1 1 45%; }   /* menos espacio para texto */
+#mission .about-photo { flex: 1 1 55%; }   /* más espacio para imagen */
 #mission .about-photo img {
-  max-width: 100%;   /* ocupa todo el ancho posible */
-  max-height: 500px; /* más alta que la de About */
+  max-width: 100%;                               /* ocupa todo el ancho */
+  max-height: clamp(400px, 50vw, 600px);         /* más grande pero balanceado */
+  height: auto;
 }
