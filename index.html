@@ -8,10 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* Reset */
+    /* reset for spacing and sizing */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
 
+    /* sets up default font, background gradient, layout structure */
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6; 
@@ -24,6 +25,7 @@
       min-height: 100vh;
     }
 
+    /* header box with border and shadow */
     .site-header {
       border: 3px solid #000;
       border-radius: 10px;
@@ -33,6 +35,7 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.12);
     }
 
+    /* header uses flex to space name and nav */
     .header-content {
       display: flex;
       justify-content: space-between;
@@ -40,6 +43,7 @@
       flex-wrap: wrap;
     }
 
+    /* name and contact stacked vertically */
     .identity-text {
       display: flex;
       flex-direction: column;
@@ -47,6 +51,7 @@
       gap: .5rem;
     }
 
+    /* styling for name title */
     .site-title {
       background-color: #333;
       color: #fff;
@@ -56,6 +61,7 @@
       margin: 0;
     }
 
+    /* contact bar look */
     .contact {
       list-style: none;
       display: flex;
@@ -67,12 +73,14 @@
       margin: 0;
     }
 
+    /* hover effect for contact links */
     .contact a {
       color: #fff;
       text-decoration: none;
     }
     .contact a:hover { color: #000; }
 
+    /* top navigation bar */
     .primary-nav {
       background-color: #333;
       border: 2px solid #000;
@@ -90,10 +98,13 @@
       padding: 0.5rem 1rem;
       display: block;
     }
+
+    /* navigation link hover color change */
     .primary-nav a:hover {
       background-color: #0a66c2;
     }
 
+    /* main content area centered */
     main {
       max-width: 900px;
       margin: 0 auto;
@@ -101,6 +112,7 @@
       flex: 1;
     }
 
+    /* section containers with borders and padding */
     section {
       margin-bottom: 2rem;
       padding: 1rem;
@@ -109,6 +121,7 @@
       border-radius: 8px;
     }
 
+    /* section titles styled with dark background */
     h2 {
       background-color: #333;
       color: #fff;
@@ -119,22 +132,28 @@
       margin-bottom: 1rem;
     }
 
+    /* heading and list spacing */
     h3 { margin-bottom: 0.5rem; color: #333; }
     h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
     ul { margin-left: 1.5rem; margin-top: 0.5rem; }
     li { margin-bottom: 0.3rem; }
 
+    /* about section uses flex for text and image */
     .about-container {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 2rem;
     }
+
+    /* profile image max size and border */
     .about-photo img {
       max-width: 500px;
       height: auto;
       border: 1px solid #000;
     }
+
+    /* mission image sizing */
     .mission-photo {
       max-width: 600px;
       width: 80%;
@@ -142,6 +161,7 @@
       border: 2px solid #000;
     }
 
+    /* footer bar at bottom */
     .site-footer {
       width: 100%;
       background-color: #333;
@@ -153,10 +173,13 @@
       margin-top: 3rem;
     }
 
+    /* responsive adjustments for tablets */
     @media (max-width: 800px) {
       .about-container { flex-direction: column; text-align: center; }
       .about-photo { align-self: center; }
     }
+
+    /* responsive adjustments for mobile nav */
     @media (max-width: 700px) {
       .header-content { flex-direction: column; align-items: flex-start; }
       .primary-nav { width: 100%; }
@@ -164,7 +187,7 @@
       .primary-nav a { text-align: center; }
     }
 
-    /* === Resume: white-on-dark subheaders + PDF buttons === */
+    /* resume section headers styled in dark theme */
     #resume h3 {
       background-color: #333;
       color: #fff;
@@ -174,6 +197,8 @@
       display: inline-block;
       margin-bottom: 1rem;
     }
+
+    /* pdf download buttons styling */
     .pdf-links { margin: 1rem 0; }
     .pdf-links a {
       background-color: #36AEBF;
@@ -188,7 +213,7 @@
     }
     .pdf-links a:hover { background-color: #2a8d9c; }
 
-    /* === About page tweaks for readability === */
+    /* about section readability tweaks */
     #about .about-text { text-align: left; }
     #about .about-text p { max-width: 70ch; }
   </style>
