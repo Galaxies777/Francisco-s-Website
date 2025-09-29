@@ -1,16 +1,16 @@
-/* Base reset to normalize sizing and spacing across elements */
+/* base reset for sizing and spacing */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
   height: 100%;
 }
 
-/* Global page styling: typography, gradient background, and full-height layout */
+/* global page styling and layout */
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   background: linear-gradient(to bottom, #36AEBF, #E0FFFF);
-  background-attachment: fixed;  /* keep the gradient fixed while scrolling */
+  background-attachment: fixed;  /* keep gradient fixed while scrolling */
   color: #1a1a1a;
   padding: 0 1rem;
   display: flex;
@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
 }
 
-/* Header card: white surface with border, rounded corners, and soft shadow */
+/* header card */
 .site-header {
   border: 3px solid #000000;
   border-radius: 10px;
@@ -28,7 +28,7 @@ body {
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-/* Header layout: identity on the left, navigation on the right */
+/* header layout */
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -37,7 +37,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Identity block: stacks name tag and contact ribbon */
+/* identity block */
 .identity-text {
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@ body {
   gap: .5rem;
 }
 
-/* Name tag: bold dark bar for visual anchor */
+/* name tag */
 .site-title {
   display: block;
   font-family: 'Monserrat', sans-serif;
@@ -59,7 +59,7 @@ body {
   width: 100%;            /* span the full width within identity block */
 }
 
-/* Contact ribbon: azure bar with inline links */
+/* contact ribbon */
 .contact {
   list-style: none;
   display: flex;
@@ -82,7 +82,7 @@ body {
 }
 .contact a:hover { color: #000; }
 
-/* Top-right navigation: dark bar with strong hover feedback */
+/* top-right navigation */
 .primary-nav {
   background-color: #333;
   border: 2px solid #000;
@@ -107,7 +107,7 @@ body {
   color: #fff;
 }
 
-/* Main content wrapper: centered column with generous width and spacing */
+/* main content wrapper */
 main {
   max-width: 1200px;   /* previously 900px; this allows wider layouts */
   margin: 0 auto;
@@ -115,7 +115,7 @@ main {
   flex: 1;
 }
 
-/* Generic card styling for sections */
+/* section cards */
 section {
   margin-bottom: 2rem;
   padding: 1rem;
@@ -124,7 +124,7 @@ section {
   border-radius: 8px;
 }
 
-/* Section headings: dark badge, white text, and black border */
+/* section headings */
 h2 {
   background-color: #333;   /* dark gray */
   color: #fff;              /* white text */
@@ -135,7 +135,7 @@ h2 {
   border: 2px solid #000;   /* black border */
 }
 
-/* Slim azure divider that appears right after each h2 */
+/* slim divider under h2 */
 h2 + *::before {
   content: "";
   display: block;
@@ -145,14 +145,14 @@ h2 + *::before {
   width: 100%;
 }
 
-/* Secondary headings and list rhythm */
+/* headings and list rhythm */
 h3 { margin-bottom: 0.5rem; color: #333; }
 h4 { font-weight: normal; margin-bottom: 0.25rem; color: #555; }
 
 ul { margin-left: 1.5rem; margin-top: 0.5rem; }
 li { margin-bottom: 0.3rem; }
 
-/* About/Mission two-column layout: text + image */
+/* two-column about/mission layout */
 .about-container {
   display: flex;
   justify-content: space-between;
@@ -169,7 +169,7 @@ li { margin-bottom: 0.3rem; }
 }
 .about-text h2 { margin-top: 0; }
 
-/* Photo styling inside the right column */
+/* image in right column */
 .about-photo img {
   max-width: 95%;     /* keep image comfortably within column */
   max-height: 450px;  /* prevent overly tall images */
@@ -179,7 +179,7 @@ li { margin-bottom: 0.3rem; }
   display: block;
 }
 
-/* Special-case heading styling for About & Mission blocks */
+/* about & mission heading look */
 #about h2,
 #mission h2 {
   background-color: #333;
@@ -191,7 +191,7 @@ li { margin-bottom: 0.3rem; }
   margin-bottom: 1rem;
 }
 
-/* Blue underline specifically for About Me and My Mission */
+/* blue underline for about and mission */
 #about h2::after,
 #mission h2::after {
   content: "";
@@ -200,138 +200,4 @@ li { margin-bottom: 0.3rem; }
   background-color: #0a66c2;
   margin-top: 0.6rem;
   width: 100%;
-}
-
-/* Typography tweak: use Times for About text content only */
-#about .about-text p,
-#about .about-text li {
-  font-family: 'Times New Roman', Times, serif;
-}
-
-/* Typography tweak: use Times for Mission text content only */
-#mission .about-text p,
-#mission .about-text li {
-  font-family: 'Times New Roman', Times, serif;
-}
-
-/* Resume page font override: give it a classic feel */
-#resume {
-  font-family: 'Times New Roman', Times, serif;
-}
-
-/* Footer strip: dark background with bold, centered text */
-.site-footer {
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  font-weight: bold;
-  border-top: 2px solid #000;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 3rem;
-}
-
-/* Tablet breakpoint: scale down some header text */
-@media (max-width: 900px) {
-  .site-title { font-size: 1.1rem; }
-}
-
-/* Mobile layout: stack header/nav and center the about/mission cards */
-@media (max-width: 700px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .primary-nav { width: 100%; }
-  .primary-nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-  .primary-nav a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-/* Mission layout emphasis: give the image more space than text */
-#mission .about-text  { flex: 1 1 45%; }   /* slightly narrower text */
-#mission .about-photo { flex: 1 1 55%; }   /* slightly wider image */
-#mission .about-photo img {
-  max-width: 100%;                               /* fill its column width */
-  max-height: clamp(400px, 50vw, 600px);         /* scale responsively with limits */
-  height: auto;
-}
-
-/* Project pages typography: render all project content in Times New Roman */
-#project1,
-#project1 h2,
-#project1 h3,
-#project1 h4,
-#project1 p,
-#project1 li,
-#project2,
-#project2 h2,
-#project2 h3,
-#project2 h4,
-#project2 p,
-#project2 li,
-#project3,
-#project3 h2,
-#project3 h3,
-#project3 h4,
-#project3 p,
-#project3 li {
-  font-family: 'Times New Roman', Times, serif;
-}
-
-/* ============ RESPONSIVE ENHANCEMENTS ============ */
-
-/* Let nav/contact wrap neatly on smaller widths */
-.primary-nav ul { flex-wrap: wrap; }
-.contact { flex-wrap: wrap; }
-
-/* Make ALL images naturally shrink to their containers (safe, global) */
-img { max-width: 100%; height: auto; }
-
-/* Large tablets and small laptops */
-@media (max-width: 1200px) {
-  main { padding: 1rem; }
-  .about-container { gap: 1.5rem; }
-}
-
-/* Tablets (portrait/landscape) */
-@media (max-width: 1024px) {
-  h2 { font-size: 1.15rem; }
-  .contact { gap: 0.75rem; }
-  .about-photo img { max-height: 400px; }
-}
-
-/* Phones (general) */
-@media (max-width: 600px) {
-  body { padding: 0 0.75rem; }
-  .site-header { padding: 0.75rem 1rem; }
-  h2 { font-size: 1.05rem; }
-  .primary-nav a { padding: 0.5rem 0.75rem; }
-  section { padding: 0.75rem; }
-  .about-container { gap: 1rem; }
-  .about-photo img { max-height: 55vh; } /* keep tall images in view */
-}
-
-/* Small phones */
-@media (max-width: 500px) {
-  ul { margin-left: 1rem; }
-  .contact { gap: 0.5rem; padding: 0.5rem 0.75rem; }
-  .site-title { font-size: 1rem; }
-}
-
-/* Extra-small phones */
-@media (max-width: 380px) {
-  .contact { flex-direction: column; align-items: flex-start; }
-  .primary-nav a { padding: 0.45rem 0.75rem; }
 }
